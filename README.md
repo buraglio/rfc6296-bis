@@ -2,10 +2,10 @@
 
 This is the working area for the individual Internet-Draft, "RFC 6296bis IPv6-to-IPv6 Network Prefix Translation".
 
-* [Editor's Copy](https://buraglio.github.io/rfc6296-bis/#go.draft-rfc6296-bis.html)
-* [Datatracker Page](https://datatracker.ietf.org/doc/draft-rfc6296-bis)
-* [Individual Draft](https://datatracker.ietf.org/doc/html/draft-rfc6296-bis)
-* [Compare Editor's Copy to Individual Draft](https://buraglio.github.io/rfc6296-bis/#go.draft-rfc6296-bis.diff)
+* [Editor's Copy](https://buraglio.github.io/rfc6296-bis/#go.draft-bctb-6man-rfc6296-bis.html)
+* [Datatracker Page](https://datatracker.ietf.org/doc/draft-bctb-6man-rfc6296-bis)
+* [Individual Draft](https://datatracker.ietf.org/doc/html/draft-bctb-6man-rfc6296-bis)
+* [Compare Editor's Copy to Individual Draft](https://buraglio.github.io/rfc6296-bis/#go.draft-bctb-6man-rfc6296-bis.diff)
 
 
 ## Contributing

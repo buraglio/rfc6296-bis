@@ -17,7 +17,7 @@
 /versioned/
 Gemfile.lock
 archive.json
-draft-rfc6296-bis.xml
+draft-bctb-6man-rfc6296-bis.xml
 package-lock.json
 report.xml
 !requirements.txt
