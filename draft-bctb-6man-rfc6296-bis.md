@@ -12,10 +12,10 @@ updates: 6296
 
 author:
    -
-     ins: M. Wasserman
-     name: Margaret Wasserman
+     ins: M. Cullen
+     name: Margaret Cullen
      org: Painless Security
-     email: mrw@painless-security.com
+     email: mrcullen42@gmail.com
    -
      ins: F. Baker
      name: Fred Baker
