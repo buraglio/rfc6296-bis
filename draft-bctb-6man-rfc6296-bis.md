@@ -19,8 +19,8 @@ author:
    -
      ins: F. Baker
      name: Fred Baker
-     org: Cisco Systems
-     email: fred@cisco.com
+     org: Unaffiliated
+     email: fredbaker.ietf@gmail.com
    -
      ins: O. Troan
      name: Ole Troan
