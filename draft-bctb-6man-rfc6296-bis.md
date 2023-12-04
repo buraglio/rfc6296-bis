@@ -862,6 +862,15 @@ are said to be "behind" the NPTv6 Translator.
    mapping in IPv6, NPTv6 Translators that comply with this
    specification MUST NOT perform port mapping.
 
+# Application Layer Gateways
+
+   As explainined in {{?RFC5382}} and {{?RFC4787}} Application Layer Gateways
+   (ALGs) interfer with UNSAF {{?RFC3424}} methods or protocols that try to be
+   NAT-aware and must therefore be used with caution.
+
+   If an NPTv6 Translator includes ALGs, it is RECOMMENDED that
+   all of those ALGs be disabled by default.
+
 #  Security Considerations
 
    When NPTv6 is deployed using either of the two-way, algorithmic
