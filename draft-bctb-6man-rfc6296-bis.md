@@ -8,7 +8,7 @@ area: Int
 wg: 6MAN
 kw: Internet-Draft
 cat: info
-updates: 6296
+obsoletes: 6296
 
 author:
    -
@@ -16,21 +16,27 @@ author:
      name: Margaret Cullen
      org: Painless Security
      email: mrcullen42@gmail.com
+     country: USA
+
    -
      ins: F. Baker
      name: Fred Baker
      org: Unaffiliated
      email: fredbaker.ietf@gmail.com
+     country: USA
+
    -
      ins: O. Troan
      name: Ole Troan
      org: Cisco Systems
      email: otroan@cisco.com
+     country: Norway
    -
      ins: N. Buraglio
      name: Nick Buraglio
      org: Energy Sciences Network
      email: buraglio@forwardingplane.net
+     country: USA
 
 informative:
     GSE:
