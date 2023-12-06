@@ -866,10 +866,9 @@ are said to be "behind" the NPTv6 Translator.
 
    As explainined in {{?RFC5382}} and {{?RFC4787}} Application Layer Gateways
    (ALGs) interfer with UNSAF {{?RFC3424}} methods or protocols that try to be
-   NAT-aware and must therefore be used with caution.
+   NAT-aware. NPTv6 is designed to be transport layer agnostic and an ALG would be incompatible with this design and the checksum-neutral mapping.
 
-   If an NPTv6 Translator includes ALGs, it is RECOMMENDED that
-   all of those ALGs be disabled by default.
+   It is RECOMMENDED that an NPTv6 translator does not include ALGs.
 
 #  Security Considerations
 
