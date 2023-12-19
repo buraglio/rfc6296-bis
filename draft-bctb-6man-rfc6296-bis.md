@@ -870,6 +870,72 @@ are said to be "behind" the NPTv6 Translator.
 
    It is RECOMMENDED that an NPTv6 translator does not include ALGs.
 
+# Implementation Status
+
+## fd.io VPP
+
+   The fd.io Vector Packet Processing (VPP) project has implemented NPTv6
+   as described in this document.  The implementation is available in
+   the fd.io VPP project's git repository at
+   https://git.fd.io/vpp/tree/src/plugins/npt66
+
+   The implementation is considered to be in the "beta" stage of
+   maturity.
+
+   It is licensed under the Apache License, Version 2.0.
+   Last updated: 2023-12-19.
+
+## Cisco
+
+   Cisco has implemented NPTv6 as described in this document in IOS-XE
+   and IOS-XR.  The implementation is considered to be in
+   the "production" stage of maturity.
+
+   It is licensed under the Cisco Systems, Inc. Software License
+   Agreement.
+   Last updated: 2023-12-19.
+
+## VyOS
+
+   VyOS has implemented NPTv6 as described in this document since VyOS 1.2 (Crux).  The
+   implementation is considered to be in the "production" stage of
+   maturity. More info can be found at https://vyos.io.
+
+   It is licensed under the GNU General Public License version 2.
+   Last updated: 2023-12-19.
+
+## Linux
+
+   Linux has implemented NPTv6 as described in this document since
+   kernel 3.14.  The implementation is considered to be in the
+   "production" stage of maturity.
+
+   It is licensed under the GNU General Public License version 2.
+   Last updated: 2023-12-19.
+
+## OPNsense
+
+   OPNsense has implemented NPTv6 as described in this document since
+   version 18.1.  The implementation is considered to be in the
+   "production" stage of maturity.
+
+   It is licensed under the 2-clause BSD license.
+   Last updated: 2023-12-19.
+
+## Palo Alto Networks
+
+   Palo Alto Networks has implemented NPTv6 as described in this document since PAN-OS 8.0.  The implementation is considered to be in the "production" stage of maturity.
+
+   It is licensed under the Palo Alto Networks End User License Agreement.
+   Last updated: 2023-12-19.
+
+## Juniper
+
+   Juniper has implemented NPTv6 as described in this document since Junos 15.1.  The implementation is considered to be in the "production" stage of maturity.
+
+   It is licensed under the Juniper End User License Agreement.
+   Last updated: 2023-12-19.
+
 #  Security Considerations
 
    When NPTv6 is deployed using either of the two-way, algorithmic
