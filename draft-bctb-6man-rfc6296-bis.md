@@ -800,8 +800,7 @@ are said to be "behind" the NPTv6 Translator.
    to determine what DNS names are associated with it and which names
    are appropriate to use in which contexts.
 
-##  Recommendation for Network Planners Considering Use of NPTv6
-      Translation
+##  Recommendation for Network Planners Considering Use of NPTv6 Translation
 
    In light of the above, network planners considering the use of NPTv6
    translation should carefully consider the kinds of applications that
@@ -864,8 +863,8 @@ are said to be "behind" the NPTv6 Translator.
 
 # Application Layer Gateways
 
-   As explainined in {{?RFC5382}} and {{?RFC4787}} Application Layer Gateways
-   (ALGs) interfer with UNSAF {{?RFC3424}} methods or protocols that try to be
+   As explained in {{?RFC5382}} and {{?RFC4787}} Application Layer Gateways
+   (ALGs) interfere with UNSAF {{?RFC3424}} methods or protocols that try to be
    NAT-aware. NPTv6 is designed to be transport layer agnostic and an ALG would be incompatible with this design and the checksum-neutral mapping.
 
    It is RECOMMENDED that an NPTv6 translator does not include ALGs.
@@ -935,6 +934,20 @@ are said to be "behind" the NPTv6 Translator.
 
    It is licensed under the Juniper End User License Agreement.
    Last updated: 2023-12-19.
+
+## Mikrotik RouterOS
+
+   Mikrotik RouterOS has implemented NPTv6 functionality as described in this document since RouterOS 7.1. The implementation is considered to be in the "production" stage of maturity.
+
+   It is licensed under the Mikrotik End User License Agreement.
+   Last Updated: 2024-01-04
+
+## IPFW
+
+  FreeBSD and other compatible systems have implemented NPTv6 functionality as described in this document as part of the IPFW toolkit since 2018.
+
+  It is licensed under the 2-clause BSD license.
+  Last updated: 2024-01-04.
 
 #  Security Considerations
 
