@@ -113,6 +113,7 @@ Table of Contents
      11.2.  Informative References
    Appendix A.  Why GSE?
    Appendix B.  Verification Code
+   Appendix C.  Changes since RFC6296
    Authors' Addresses
 
 1.  Introduction
@@ -170,9 +171,9 @@ Table of Contents
       that changes Internet addresses.
 
    *  Applications using the Internet Key Exchange Protocol Version 2
-      (IKEv2) [RFC5996] should, at least in theory, detect the presence
+      (IKEv2) [RFC7296] should, at least in theory, detect the presence
       of the translator; while no NAT traversal solution is required,
-      [RFC5996] would require such sessions to use UDP.
+      [RFC7296] would require such sessions to use UDP.
 
 1.1.  What is Address Independence?
 
@@ -448,7 +449,7 @@ Table of Contents
    (prefix and IID) to the common internal address.  A system within the
    edge network is unable to determine which external address it is
    using apart from services such as Session Traversal Utilities for NAT
-   (STUN) [RFC5389].
+   (STUN) [RFC8489].
 
    Multihoming in this sense has one negative feature as compared with
    multihoming with a provider-independent address: when routes change
@@ -730,7 +731,7 @@ Table of Contents
    addresses on command.  Since the most common place anticipated for
    the implementation of an NPTv6 Translator is a Customer Premises
    Equipment (CPE) router, the reader is urged to consider the
-   requirements of [RFC6204].
+   requirements of [RFC7084].
 
 4.2.  Subnet Numbering
 
@@ -857,9 +858,9 @@ Table of Contents
 
 5.2.  Recommendations for Application Writers
 
-   Several mechanisms (e.g., STUN [RFC5389], Traversal Using Relays
-   around NAT (TURN) [RFC5766], and Interactive Connectivity
-   Establishment (ICE) [RFC5245]) have been used with traditional IPv4
+   Several mechanisms (e.g., STUN [RFC8489], Traversal Using Relays
+   around NAT (TURN) [RFC8656], and Interactive Connectivity
+   Establishment (ICE) [RFC8445]) have been used with traditional IPv4
    NAT to circumvent some of the limitations of such devices.  Similar
    mechanisms could also be applied to circumvent some of the issues
    with an NPTv6 Translator.  However, all of these require the
@@ -875,7 +876,7 @@ Table of Contents
    a mechanism were to be defined, it would ideally be general enough to
    also accommodate other types of NAT likely to be encountered by IPV6
    applications, in particular IPv4/IPv6 Translation [RFC6144] [RFC6147]
-   [RFC6145] [RFC6146] [RFC6052].  For this and other reasons, such a
+   [RFC7915] [RFC6146] [RFC6052].  For this and other reasons, such a
    mechanism is beyond the scope of this document.
 
 6.  A Note on Port Mapping
@@ -1130,10 +1131,10 @@ Table of Contents
               Address Translation", RFC 3424, DOI 10.17487/RFC3424,
               November 2002, <https://www.rfc-editor.org/info/rfc3424>.
 
-   [RFC5996]  Kaufman, C., Hoffman, P., Nir, Y., and P. Eronen,
-              "Internet Key Exchange Protocol Version 2 (IKEv2)",
-              RFC 5996, DOI 10.17487/RFC5996, September 2010,
-              <https://www.rfc-editor.org/info/rfc5996>.
+   [RFC7296]  Kaufman, C., Hoffman, P., Nir, Y., Eronen, P., and T.
+              Kivinen, "Internet Key Exchange Protocol Version 2
+              (IKEv2)", STD 79, RFC 7296, DOI 10.17487/RFC7296, October
+              2014, <https://www.rfc-editor.org/info/rfc7296>.
 
    [RFC2827]  Ferguson, P. and D. Senie, "Network Ingress Filtering:
               Defeating Denial of Service Attacks which employ IP Source
@@ -1150,32 +1151,32 @@ Table of Contents
               DOI 10.17487/RFC5508, April 2009,
               <https://www.rfc-editor.org/info/rfc5508>.
 
-   [RFC6204]  Singh, H., Beebee, W., Donley, C., Stark, B., and O.
-              Troan, Ed., "Basic Requirements for IPv6 Customer Edge
-              Routers", RFC 6204, DOI 10.17487/RFC6204, April 2011,
-              <https://www.rfc-editor.org/info/rfc6204>.
+   [RFC7084]  Singh, H., Beebee, W., Donley, C., and B. Stark, "Basic
+              Requirements for IPv6 Customer Edge Routers", RFC 7084,
+              DOI 10.17487/RFC7084, November 2013,
+              <https://www.rfc-editor.org/info/rfc7084>.
 
    [RFC6724]  Thaler, D., Ed., Draves, R., Matsumoto, A., and T. Chown,
               "Default Address Selection for Internet Protocol Version 6
               (IPv6)", RFC 6724, DOI 10.17487/RFC6724, September 2012,
               <https://www.rfc-editor.org/info/rfc6724>.
 
-   [RFC5389]  Rosenberg, J., Mahy, R., Matthews, P., and D. Wing,
-              "Session Traversal Utilities for NAT (STUN)", RFC 5389,
-              DOI 10.17487/RFC5389, October 2008,
-              <https://www.rfc-editor.org/info/rfc5389>.
+   [RFC8489]  Petit-Huguenin, M., Salgueiro, G., Rosenberg, J., Wing,
+              D., Mahy, R., and P. Matthews, "Session Traversal
+              Utilities for NAT (STUN)", RFC 8489, DOI 10.17487/RFC8489,
+              February 2020, <https://www.rfc-editor.org/info/rfc8489>.
 
-   [RFC5766]  Mahy, R., Matthews, P., and J. Rosenberg, "Traversal Using
-              Relays around NAT (TURN): Relay Extensions to Session
-              Traversal Utilities for NAT (STUN)", RFC 5766,
-              DOI 10.17487/RFC5766, April 2010,
-              <https://www.rfc-editor.org/info/rfc5766>.
+   [RFC8656]  Reddy, T., Ed., Johnston, A., Ed., Matthews, P., and J.
+              Rosenberg, "Traversal Using Relays around NAT (TURN):
+              Relay Extensions to Session Traversal Utilities for NAT
+              (STUN)", RFC 8656, DOI 10.17487/RFC8656, February 2020,
+              <https://www.rfc-editor.org/info/rfc8656>.
 
-   [RFC5245]  Rosenberg, J., "Interactive Connectivity Establishment
-              (ICE): A Protocol for Network Address Translator (NAT)
-              Traversal for Offer/Answer Protocols", RFC 5245,
-              DOI 10.17487/RFC5245, April 2010,
-              <https://www.rfc-editor.org/info/rfc5245>.
+   [RFC8445]  Keranen, A., Holmberg, C., and J. Rosenberg, "Interactive
+              Connectivity Establishment (ICE): A Protocol for Network
+              Address Translator (NAT) Traversal", RFC 8445,
+              DOI 10.17487/RFC8445, July 2018,
+              <https://www.rfc-editor.org/info/rfc8445>.
 
    [RFC6144]  Baker, F., Li, X., Bao, C., and K. Yin, "Framework for
               IPv4/IPv6 Translation", RFC 6144, DOI 10.17487/RFC6144,
@@ -1187,9 +1188,10 @@ Table of Contents
               DOI 10.17487/RFC6147, April 2011,
               <https://www.rfc-editor.org/info/rfc6147>.
 
-   [RFC6145]  Li, X., Bao, C., and F. Baker, "IP/ICMP Translation
-              Algorithm", RFC 6145, DOI 10.17487/RFC6145, April 2011,
-              <https://www.rfc-editor.org/info/rfc6145>.
+   [RFC7915]  Bao, C., Li, X., Baker, F., Anderson, T., and F. Gont,
+              "IP/ICMP Translation Algorithm", RFC 7915,
+              DOI 10.17487/RFC7915, June 2016,
+              <https://www.rfc-editor.org/info/rfc7915>.
 
    [RFC6146]  Bagnulo, M., Matthews, P., and I. van Beijnum, "Stateful
               NAT64: Network Address and Protocol Translation from IPv6
@@ -1638,6 +1640,33 @@ Appendix B.  Verification Code
          }
      }
    <CODE ENDS>
+
+Appendix C.  Changes since RFC6296
+
+   *  Revision 03
+
+      -  Updated references to updated RFCs.  RFC 5996, RFC 6204, RFC
+         5389, RFC 5766, RFC 5245, RFC6145.
+
+      -  Added changes from RFC6296 section (this)
+
+   *  Revision 02
+
+      -  Added section on implementation status
+
+      -  Added section recommending against the use of ALG
+
+   *  Revision 01
+
+      -  Added authors
+
+      -  Added section on ICMPv6 error proxying
+
+      -  Fixed errata 3033
+
+   *  Revision 00
+
+      -  Converted to Markdown format from XML RFC6296 original.
 
 Authors' Addresses
 
