@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta content="Common,Latin" name="scripts">
 <meta content="initial-scale=1.0" name="viewport">
-<title>RFC 6296bis IPv6-to-IPv6 Network Prefix Translation</title>
+<title>IPv6-to-IPv6 Network Prefix Translation</title>
 <meta content="Margaret Cullen" name="author">
 <meta content="Fred Baker" name="author">
 <meta content="Ole Troan" name="author">
@@ -1081,7 +1081,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 </dd>
 </dl>
 </div>
-<h1 id="title">RFC 6296bis IPv6-to-IPv6 Network Prefix Translation</h1>
+<h1 id="title">IPv6-to-IPv6 Network Prefix Translation</h1>
 <section id="section-abstract">
       <h2 id="abstract"><a href="#abstract" class="selfRef">Abstract</a></h2>
 <p id="section-abstract-1">This document describes a stateless, transport-agnostic IPv6-to-IPv6
@@ -1559,7 +1559,7 @@ be functionally the same; if they differ, the longer of the two will
 limit the ability to use subnets in the shorter.<a href="#section-2.1-1" class="pilcrow">¶</a></p>
 <div class="alignLeft art-text artwork" id="section-2.1-2">
 <pre>
-               External Network:  Prefix = 2001:db8:0001::/48
+               External Network:  Prefix = 2001:db8:1::/48
                    --------------------------------------
                                      |
                                      |
@@ -1570,7 +1570,7 @@ limit the ability to use subnets in the shorter.<a href="#section-2.1-1" class="
                                      |
                                      |
                    --------------------------------------
-               Internal Network:  Prefix = fd01:0203:0405::/48
+               Internal Network:  Prefix = fd01:203:405::/48
 
                        Figure 1: A Simple Translator
 </pre><a href="#section-2.1-2" class="pilcrow">¶</a>
@@ -1588,10 +1588,10 @@ corresponding external prefix.  When datagrams are forwarded in the
 network, the IPv6 destination prefix is overwritten with a
 corresponding internal prefix.  Using the prefixes shown in the
 diagram above, as an IP datagram passes through the NPTv6 Translator
-in the outbound direction, the source prefix (fd01:0203:0405::/48)
-will be overwritten with the external prefix (2001:db8:0001::/48).
-In an inbound datagram, the destination prefix (2001:db8:0001::/48)
-will be overwritten with the internal prefix (fd01:0203:0405::/48).
+in the outbound direction, the source prefix (fd01:203:405::/48)
+will be overwritten with the external prefix (2001:db8:1::/48).
+In an inbound datagram, the destination prefix (2001:db8:1::/48)
+will be overwritten with the internal prefix (fd01:203:405::/48).
 In both cases, it is the local IPv6 prefix that is overwritten; the
 remote IPv6 prefix remains unchanged.  Nodes on the internal network
 are said to be "behind" the NPTv6 Translator.<a href="#section-2.1-4" class="pilcrow">¶</a></p>
@@ -1612,9 +1612,9 @@ are said to be "behind" the NPTv6 Translator.<a href="#section-2.1-4" class="pil
                        V        |  Device |      ^
                        V        +---------+      ^
               External Prefix       |            ^
-              2001:db8:0001::/48    |            ^
+              2001:db8:1::/48    |            ^
                   --------------------------------------
-                  Internal Prefix = fd01:0203:0405::/48
+                  Internal Prefix = fd01:203:405::/48
 
                Figure 2: Flow of Information in Translation
 </pre><a href="#section-2.1-7" class="pilcrow">¶</a>
@@ -1634,7 +1634,7 @@ are said to be "behind" the NPTv6 Translator.<a href="#section-2.1-4" class="pil
    (IID)) to the internal address.<a href="#section-2.2-1" class="pilcrow">¶</a></p>
 <div class="alignLeft art-text artwork" id="section-2.2-2">
 <pre>
-               External Network:  Prefix = 2001:db8:0001::/48
+               External Network:  Prefix = 2001:db8:1::/48
                    --------------------------------------
                           |                      |
                           |                      |
@@ -1646,7 +1646,7 @@ are said to be "behind" the NPTv6 Translator.<a href="#section-2.1-4" class="pil
                           |                      |
                           |                      |
                    --------------------------------------
-               Internal Network:  Prefix = fd01:0203:0405::/48
+               Internal Network:  Prefix = fd01:203:405::/48
 
                       Figure 3: Parallel Translators
 </pre><a href="#section-2.2-2" class="pilcrow">¶</a>
@@ -1661,7 +1661,7 @@ are said to be "behind" the NPTv6 Translator.<a href="#section-2.1-4" class="pil
 <div class="alignLeft art-text artwork" id="section-2.3-1">
 <pre>
             External Network #1:          External Network #2:
-         Prefix = 2001:db8:0001::/48    Prefix = 2001:db8:5555::/48
+         Prefix = 2001:db8:1::/48    Prefix = 2001:db8:5555::/48
          ---------------------------    --------------------------
                          |                      |
                          |                      |
@@ -1673,7 +1673,7 @@ are said to be "behind" the NPTv6 Translator.<a href="#section-2.1-4" class="pil
                          |                      |
                          |                      |
                   --------------------------------------
-              Internal Network:  Prefix = fd01:0203:0405::/48
+              Internal Network:  Prefix = fd01:203:405::/48
 
       Figure 4: Parallel Translators with Different Upstream Networks
 </pre><a href="#section-2.3-1" class="pilcrow">¶</a>
@@ -1892,28 +1892,28 @@ They are then zero-extended to /64 for the purposes of a calculation.
         <h3 id="name-48-prefix-mapping-example">
 <a href="#section-3.6" class="section-number selfRef">3.6. </a><a href="#name-48-prefix-mapping-example" class="section-name selfRef">/48 Prefix Mapping Example</a>
         </h3>
-<p id="section-3.6-1">For the network shown in Figure 1, the Internal Prefix is fd01:0203:
-   0405::/48, and the External Prefix is 2001:db8:0001::/48.<a href="#section-3.6-1" class="pilcrow">¶</a></p>
-<p id="section-3.6-2">If a node with internal address fd01:0203:0405:0001::1234 sends an
+<p id="section-3.6-1">For the network shown in Figure 1, the Internal Prefix is fd01:203:
+   405::/48, and the External Prefix is 2001:db8:1::/48.<a href="#section-3.6-1" class="pilcrow">¶</a></p>
+<p id="section-3.6-2">If a node with internal address fd01:203:405:1::1234 sends an
    outbound datagram through the NPTv6 Translator, the resulting
-   external address will be 2001:db8:0001:d550::1234.  The resulting
+   external address will be 2001:db8:1:d550::1234.  The resulting
    address is obtained by calculating the checksum of both the internal
    and external 48-bit prefixes, subtracting the internal prefix from
    the external prefix using one's complement arithmetic to calculate
    the "adjustment", and adding the adjustment to the 16-bit subnet
    field (in this case, 0x0001).<a href="#section-3.6-2" class="pilcrow">¶</a></p>
 <p id="section-3.6-3">To show the work:<a href="#section-3.6-3" class="pilcrow">¶</a></p>
-<p id="section-3.6-4">The one's complement checksum of fd01:0203:0405 is 0xFCF5.  The one's
-   complement checksum of 2001:db8:0001 is 0xD245.  Using one's
+<p id="section-3.6-4">The one's complement checksum of fd01:203:405 is 0xFCF5.  The one's
+   complement checksum of 2001:db8:1 is 0xD245.  Using one's
    complement arithmetic, 0xD245 - 0xFCF5 = 0xD54F.  The subnet in the
    original datagram is 0x0001.  Using one's complement arithmetic,
    0x0001 + 0xD54F = 0xD550.  Since 0xD550 != 0xFFFF, it is not changed
    to 0x0000.<a href="#section-3.6-4" class="pilcrow">¶</a></p>
 <p id="section-3.6-5">So, the value 0xD550 is written in the 16-bit subnet area, resulting
-   in a mapped external address of 2001:db8:0001:d550::1234.<a href="#section-3.6-5" class="pilcrow">¶</a></p>
+   in a mapped external address of 2001:db8:1:d550::1234.<a href="#section-3.6-5" class="pilcrow">¶</a></p>
 <p id="section-3.6-6">When a response datagram is received, it will contain the destination
-   address 2001:db8:0001:d550::1234, which will be mapped back to fd01:
-   0203:0405:0001::1234 using the inverse mapping algorithm.<a href="#section-3.6-6" class="pilcrow">¶</a></p>
+   address 2001:db8:1:d550::1234, which will be mapped back to fd01:
+   203:405:1::1234 using the inverse mapping algorithm.<a href="#section-3.6-6" class="pilcrow">¶</a></p>
 <p id="section-3.6-7">In this case, the difference between the two prefixes will be
    calculated as follows:<a href="#section-3.6-7" class="pilcrow">¶</a></p>
 <p id="section-3.6-8">Using one's complement arithmetic, 0xFCF5 - 0xD245 = 0x2AB0.  The
