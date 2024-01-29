@@ -255,7 +255,7 @@ agency from which it was allocated.
 There are significant technical impacts associated with the
 deployment of any prefix translation mechanism, including NPTv6, and
 we strongly encourage anyone who is considering the implementation or
-deployment of NPTv6 to read {{RFC4864}} and {{RFC5925}}, and to carefully
+deployment of NPTv6 to read {{RFC4864}} and {{RFC5902}}, and to carefully
 consider the alternatives described in that document, some of which
 may cause fewer problems than NPTv6.
 
