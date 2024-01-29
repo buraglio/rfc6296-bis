@@ -59,6 +59,8 @@ address-independence benefit associated with IPv4-to-IPv4 NAT
 "inside" and "outside" prefixes, preserving end-to-end reachability
 at the network layer.
 
+This document obsoletes RFC 6296.
+
 --- middle
 
 #  Introduction
@@ -1459,6 +1461,7 @@ are said to be "behind" the NPTv6 Translator.
    - Added changes from RFC6296 section (this)
    - Boilerplate text to Implementation status
    - Update IPv6 addresses to be 5952 compliant
+   - Add note that this document obsoletes RFC6296.
 
 * Revision 02
    - Added section on implementation status
