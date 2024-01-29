@@ -108,7 +108,7 @@ ramifications:
 * TCP sessions that authenticate peers using the TCP Authentication
       Option {{?RFC5925}} cannot have their addresses translated, as the
       addresses are used in the calculation of the Message
-      Authentication Code.  This consideration applies in general to any
+      Authentication Code.  This consideration applies in general to any.
 
 * Unilateral Self-Address Fixing (UNSAF) {{?RFC3424}} Protocol, which
       the IAB recommends against the deployment of in an environment
@@ -259,9 +259,7 @@ may cause fewer problems than NPTv6.
 
 ##  Requirements Terminology
 
-   The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
-   "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this
-   document are to be interpreted as described in RFC 2119 {{!RFC2119}}.
+{::boilerplate bcp14-tagged}
 
 #  NPTv6 Overview
 
@@ -464,7 +462,8 @@ are said to be "behind" the NPTv6 Translator.
 #  NPTv6 Algorithmic Specification
 
    The {{!RFC4291}} IPv6 Address is reproduced for clarity in Figure 5.
-   ~~~~~~~~~~
+
+~~~~~~~~~~
 
       0    15 16   31 32   47 48   63 64   79 80   95 96  111 112  127
      +-------+-------+-------+-------+-------+-------+-------+-------+
@@ -477,7 +476,7 @@ are said to be "behind" the NPTv6 Translator.
 ##  NPTv6 Configuration Calculations
 
    When an NPTv6 Translation function is configured, it is configured
-   with
+   with:
 
 * one or more "internal" interfaces with their "internal" routing
       domain prefixes, and
@@ -1073,14 +1072,16 @@ are said to be "behind" the NPTv6 Translator.
    burden placed either on the ISP or the edge network as a result.
    From an application perspective, an additional operational
    requirement in the words of the Roadmap for the Smart Grid {{NIST}} is
-   that
-~~~~~~~~~~
-      "...the network should provide the capability to enable an
-      application in a particular domain to communicate with an
-      application in any other domain over the information network, with
-      proper management control as to who and where applications can be
-      inter-connected."
-~~~~~~~~~~
+   that:
+
+
+> "...the network should provide the capability to enable an
+> application in a particular domain to communicate with an
+> application in any other domain over the information network, with
+> proper management control as to who and where applications can be
+> inter-connected."
+
+
    In other words, the structure of the network should allow for and
    enable appropriate access control, but the structure of the network
    should not inherently limit access.
@@ -1107,7 +1108,7 @@ are said to be "behind" the NPTv6 Translator.
    suppress 0xFFFF by overwriting with zero and whether predicted issues
    with subnet numbering were real.
 
-   The point is to
+   The point is to:
 
 * demonstrate that if one or the other representation of zero is not
       used in the word in which the checksum is updated, the program
@@ -1130,6 +1131,7 @@ are said to be "behind" the NPTv6 Translator.
    networks with a /48 external prefix.
 
 ~~~~~~~~~~~
+<CODE BEGINS>
 
   /*
    * Copyright (c) 2011 IETF Trust and the persons identified as
@@ -1425,4 +1427,5 @@ are said to be "behind" the NPTv6 Translator.
       }
   }
 
+<CODE ENDS>
 ~~~~~~~~~~~
