@@ -1037,7 +1037,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 </tr></thead>
 <tfoot><tr>
 <td class="left">Cullen, et al.</td>
-<td class="center">Expires 29 July 2024</td>
+<td class="center">Expires 1 August 2024</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1053,12 +1053,12 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <a href="https://www.rfc-editor.org/rfc/rfc6296" class="eref">6296</a> (if approved)</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2024-01-26" class="published">26 January 2024</time>
+<time datetime="2024-01-29" class="published">29 January 2024</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Standards Track</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2024-07-29">29 July 2024</time></dd>
+<dd class="expires"><time datetime="2024-08-01">1 August 2024</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1117,7 +1117,7 @@ at the network layer.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 29 July 2024.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 1 August 2024.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1358,7 +1358,7 @@ ramifications:<a href="#section-1-3" class="pilcrow">¶</a></p>
           <p id="section-1-4.5.1">TCP sessions that authenticate peers using the TCP Authentication
     Option <span>[<a href="#RFC5925" class="cite xref">RFC5925</a>]</span> cannot have their addresses translated, as the
     addresses are used in the calculation of the Message
-    Authentication Code.  This consideration applies in general to any<a href="#section-1-4.5.1" class="pilcrow">¶</a></p>
+    Authentication Code.  This consideration applies in general to any.<a href="#section-1-4.5.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="section-1-4.6">
           <p id="section-1-4.6.1">Unilateral Self-Address Fixing (UNSAF) <span>[<a href="#RFC3424" class="cite xref">RFC3424</a>]</span> Protocol, which
@@ -1520,9 +1520,10 @@ may cause fewer problems than NPTv6.<a href="#section-1.2-6" class="pilcrow">¶<
         <h3 id="name-requirements-terminology">
 <a href="#section-1.3" class="section-number selfRef">1.3. </a><a href="#name-requirements-terminology" class="section-name selfRef">Requirements Terminology</a>
         </h3>
-<p id="section-1.3-1">The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
-   "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this
-   document are to be interpreted as described in RFC 2119 <span>[<a href="#RFC2119" class="cite xref">RFC2119</a>]</span>.<a href="#section-1.3-1" class="pilcrow">¶</a></p>
+<p id="section-1.3-1">The key words "<span class="bcp14">MUST</span>", "<span class="bcp14">MUST NOT</span>", "<span class="bcp14">REQUIRED</span>", "<span class="bcp14">SHALL</span>", "<span class="bcp14">SHALL NOT</span>", "<span class="bcp14">SHOULD</span>", "<span class="bcp14">SHOULD NOT</span>", "<span class="bcp14">RECOMMENDED</span>", "<span class="bcp14">NOT RECOMMENDED</span>",
+"<span class="bcp14">MAY</span>", and "<span class="bcp14">OPTIONAL</span>" in this document are to be interpreted as
+described in BCP 14 <span>[<a href="#RFC2119" class="cite xref">RFC2119</a>]</span> <span>[<a href="#RFC8174" class="cite xref">RFC8174</a>]</span> when, and only when, they
+appear in all capitals, as shown here.<a href="#section-1.3-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 </section>
@@ -1747,16 +1748,15 @@ are said to be "behind" the NPTv6 Translator.<a href="#section-2.1-4" class="pil
       <h2 id="name-nptv6-algorithmic-specifica">
 <a href="#section-3" class="section-number selfRef">3. </a><a href="#name-nptv6-algorithmic-specifica" class="section-name selfRef">NPTv6 Algorithmic Specification</a>
       </h2>
-<p id="section-3-1">The <span>[<a href="#RFC4291" class="cite xref">RFC4291</a>]</span> IPv6 Address is reproduced for clarity in Figure 5.
-   ~~~~~~~~~~<a href="#section-3-1" class="pilcrow">¶</a></p>
+<p id="section-3-1">The <span>[<a href="#RFC4291" class="cite xref">RFC4291</a>]</span> IPv6 Address is reproduced for clarity in Figure 5.<a href="#section-3-1" class="pilcrow">¶</a></p>
 <div class="alignLeft art-text artwork" id="section-3-2">
 <pre>
-  0    15 16   31 32   47 48   63 64   79 80   95 96  111 112  127
- +-------+-------+-------+-------+-------+-------+-------+-------+
- |     Routing Prefix    | Subnet|   Interface Identifier (IID)  |
- +-------+-------+-------+-------+-------+-------+-------+-------+
+      0    15 16   31 32   47 48   63 64   79 80   95 96  111 112  127
+     +-------+-------+-------+-------+-------+-------+-------+-------+
+     |     Routing Prefix    | Subnet|   Interface Identifier (IID)  |
+     +-------+-------+-------+-------+-------+-------+-------+-------+
 
-        Figure 5: Enumeration of the IPv6 Address {{RFC4291}} ~~~~~~~~~~
+            Figure 5: Enumeration of the IPv6 Address {{RFC4291}}
 </pre><a href="#section-3-2" class="pilcrow">¶</a>
 </div>
 <div id="nptv6-configuration-calculations">
@@ -1765,7 +1765,7 @@ are said to be "behind" the NPTv6 Translator.<a href="#section-2.1-4" class="pil
 <a href="#section-3.1" class="section-number selfRef">3.1. </a><a href="#name-nptv6-configuration-calcula" class="section-name selfRef">NPTv6 Configuration Calculations</a>
         </h3>
 <p id="section-3.1-1">When an NPTv6 Translation function is configured, it is configured
-   with<a href="#section-3.1-1" class="pilcrow">¶</a></p>
+   with:<a href="#section-3.1-1" class="pilcrow">¶</a></p>
 <ul class="normal">
 <li class="normal" id="section-3.1-2.1">
             <p id="section-3.1-2.1.1">one or more "internal" interfaces with their "internal" routing
@@ -1809,7 +1809,7 @@ They are then zero-extended to /64 for the purposes of a calculation.
 <ul class="normal">
 <li class="normal" id="section-3.2-2.1">
             <p id="section-3.2-2.1.1">If the internal subnet number has no mapping, such as being 0xFFFF
-    or simply not mapped, discard the datagram.  This SHOULD result in
+    or simply not mapped, discard the datagram.  This <span class="bcp14">SHOULD</span> result in
     an ICMP Destination Unreachable.<a href="#section-3.2-2.1.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-3.2-2.2">
@@ -1857,13 +1857,13 @@ They are then zero-extended to /64 for the purposes of a calculation.
         </h3>
 <p id="section-3.4-1">When an NPTv6 Translator is configured with internal and external
    prefixes that are 48 bits in length (a /48) or shorter, the
-   adjustment MUST be added to or subtracted from bits 48..63 of the
+   adjustment <span class="bcp14">MUST</span> be added to or subtracted from bits 48..63 of the
    address.
    This mapping results in no modification of the Interface Identifier
    (IID), which is held in the lower half of the IPv6 address, so it
    will not interfere with future protocols that may use unique IIDs for
    node identification.<a href="#section-3.4-1" class="pilcrow">¶</a></p>
-<p id="section-3.4-2">NPTv6 Translator implementations MUST implement the /48 mapping.<a href="#section-3.4-2" class="pilcrow">¶</a></p>
+<p id="section-3.4-2">NPTv6 Translator implementations <span class="bcp14">MUST</span> implement the /48 mapping.<a href="#section-3.4-2" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="nptv6-with-a-49-or-longer-prefix">
@@ -1876,9 +1876,9 @@ They are then zero-extended to /64 for the purposes of a calculation.
    or /60), the adjustment must be added to or subtracted from one of
    the words in bits 64..79, 80..95, 96..111, or 112..127 of the
    address.  While the choice of word is immaterial as long as it is
-   consistent, these words MUST be inspected in that sequence and the
+   consistent, these words <span class="bcp14">MUST</span> be inspected in that sequence and the
    first that is not initially 0xFFFF chosen, for consistency's sake.<a href="#section-3.5-1" class="pilcrow">¶</a></p>
-<p id="section-3.5-2">NPTv6 Translator implementations SHOULD implement the mapping for
+<p id="section-3.5-2">NPTv6 Translator implementations <span class="bcp14">SHOULD</span> implement the mapping for
    longer prefixes.<a href="#section-3.5-2" class="pilcrow">¶</a></p>
 </section>
 </div>
@@ -1948,8 +1948,8 @@ They are then zero-extended to /64 for the purposes of a calculation.
    IID of all-ones is a reserved anycast identifier that should not be
    used on the network <span>[<a href="#RFC2526" class="cite xref">RFC2526</a>]</span>.  If an NPTv6 Translator discovers a
    datagram with an IID of all-zeros while performing address mapping,
-   that datagram MUST be dropped, and an ICMPv6 Parameter Problem error
-   SHOULD be generated <span>[<a href="#RFC4443" class="cite xref">RFC4443</a>]</span>.
+   that datagram <span class="bcp14">MUST</span> be dropped, and an ICMPv6 Parameter Problem error
+   <span class="bcp14">SHOULD</span> be generated <span>[<a href="#RFC4443" class="cite xref">RFC4443</a>]</span>.
    Note: This mechanism does involve modification of the IID; it may not
    be compatible with future mechanisms that use unique IIDs for node
    identification.<a href="#section-3.7-4" class="pilcrow">¶</a></p>
@@ -1968,16 +1968,16 @@ They are then zero-extended to /64 for the purposes of a calculation.
    is translated from the external prefix to the internal prefix. While the outer IPv6 header
    destination address is translated from the external prefix to the internal prefix as normal.
    If the embedded IPv6 source address prefix does not match the external prefix prior to the rewrite,
-   the packet MUST be silently dropped.<a href="#section-3.8-3" class="pilcrow">¶</a></p>
+   the packet <span class="bcp14">MUST</span> be silently dropped.<a href="#section-3.8-3" class="pilcrow">¶</a></p>
 <p id="section-3.8-4">For an ICMPv6 error received from the "inside", the embedded IPv6 header destination address
    is translated from the internal prefix to the external prefix. While the outer IPv6 header
    source address is translated from the internal prefix to the external prefix as normal.
    If the embedded IPv6 destination address prefix does not match the internal prefix prior to the rewrite,
-   the packet MUST be silently dropped.<a href="#section-3.8-4" class="pilcrow">¶</a></p>
-<p id="section-3.8-5">The ICMPv6 forwarding function MUST verify that the length of the embedded pacekt is long enough to contain the whole IPv6 header.<a href="#section-3.8-5" class="pilcrow">¶</a></p>
+   the packet <span class="bcp14">MUST</span> be silently dropped.<a href="#section-3.8-4" class="pilcrow">¶</a></p>
+<p id="section-3.8-5">The ICMPv6 forwarding function <span class="bcp14">MUST</span> verify that the length of the embedded pacekt is long enough to contain the whole IPv6 header.<a href="#section-3.8-5" class="pilcrow">¶</a></p>
 <p id="section-3.8-6">An ICMPv6 Error message checksum covers the entire ICMPv6 message,
    including the payload.  When an ICMPv6 Error packet is received, if the
-   ICMPv6 checksum fails to validate, NPTv6 SHOULD silently drop the
+   ICMPv6 checksum fails to validate, NPTv6 <span class="bcp14">SHOULD</span> silently drop the
    ICMPv6 Error packet.  This is because NATv6 uses the embedded IPv6 and
    transport headers for forwarding and translating the ICMPv6 Error
    message.  When the ICMPv6 checksum is
@@ -1997,10 +1997,10 @@ They are then zero-extended to /64 for the purposes of a calculation.
         <h3 id="name-prefix-configuration-and-ge">
 <a href="#section-4.1" class="section-number selfRef">4.1. </a><a href="#name-prefix-configuration-and-ge" class="section-name selfRef">Prefix Configuration and Generation</a>
         </h3>
-<p id="section-4.1-1">NPTv6 Translators MUST support manual configuration of internal and
-   external prefixes and MUST NOT place any restrictions on those
+<p id="section-4.1-1">NPTv6 Translators <span class="bcp14">MUST</span> support manual configuration of internal and
+   external prefixes and <span class="bcp14">MUST NOT</span> place any restrictions on those
    prefixes except that they be valid IPv6 unicast prefixes as described
-   in <span>[<a href="#RFC4291" class="cite xref">RFC4291</a>]</span>.  They MAY also support random generation of ULA
+   in <span>[<a href="#RFC4291" class="cite xref">RFC4291</a>]</span>.  They <span class="bcp14">MAY</span> also support random generation of ULA
    addresses on command.  Since the most common place anticipated for
    the implementation of an NPTv6 Translator is a Customer Premises
    Equipment (CPE) router, the reader is urged to consider the
@@ -2013,7 +2013,7 @@ They are then zero-extended to /64 for the purposes of a calculation.
 <a href="#section-4.2" class="section-number selfRef">4.2. </a><a href="#name-subnet-numbering" class="section-name selfRef">Subnet Numbering</a>
         </h3>
 <p id="section-4.2-1">For reasons detailed in Appendix B, a network using NPTv6 Translation
-   and a /48 external prefix MUST NOT use the value 0xFFFF to designate
+   and a /48 external prefix <span class="bcp14">MUST NOT</span> use the value 0xFFFF to designate
    a subnet that it expects to be translated.<a href="#section-4.2-1" class="pilcrow">¶</a></p>
 </section>
 </div>
@@ -2022,7 +2022,7 @@ They are then zero-extended to /64 for the purposes of a calculation.
         <h3 id="name-nat-behavioral-requirements">
 <a href="#section-4.3" class="section-number selfRef">4.3. </a><a href="#name-nat-behavioral-requirements" class="section-name selfRef">NAT Behavioral Requirements</a>
         </h3>
-<p id="section-4.3-1">NPTv6 Translators MUST support hairpinning behavior, as defined in
+<p id="section-4.3-1">NPTv6 Translators <span class="bcp14">MUST</span> support hairpinning behavior, as defined in
    the NAT Behavioral Requirements for UDP document <span>[<a href="#RFC4787" class="cite xref">RFC4787</a>]</span>.  This
    means that when an NPTv6 Translator receives a datagram on the
    internal interface that has a destination address that matches the
@@ -2210,7 +2210,7 @@ To some extent, the incidence of these difficulties can be reduced by
 <p id="section-6-4">Since there is significant detriment caused by modifying transport
    layer headers and very little, if any, benefit to the use of port
    mapping in IPv6, NPTv6 Translators that comply with this
-   specification MUST NOT perform port mapping.<a href="#section-6-4" class="pilcrow">¶</a></p>
+   specification <span class="bcp14">MUST NOT</span> perform port mapping.<a href="#section-6-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="application-layer-gateways">
@@ -2221,7 +2221,7 @@ To some extent, the incidence of these difficulties can be reduced by
 <p id="section-7-1">As explained in <span>[<a href="#RFC5382" class="cite xref">RFC5382</a>]</span> and <span>[<a href="#RFC4787" class="cite xref">RFC4787</a>]</span> Application Layer Gateways
    (ALGs) interfere with UNSAF <span>[<a href="#RFC3424" class="cite xref">RFC3424</a>]</span> methods or protocols that try to be
    NAT-aware. NPTv6 is designed to be transport layer agnostic and an ALG would be incompatible with this design and the checksum-neutral mapping.<a href="#section-7-1" class="pilcrow">¶</a></p>
-<p id="section-7-2">It is RECOMMENDED that an NPTv6 translator does not include ALGs.<a href="#section-7-2" class="pilcrow">¶</a></p>
+<p id="section-7-2">It is <span class="bcp14">RECOMMENDED</span> that an NPTv6 translator does not include ALGs.<a href="#section-7-2" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="implementation-status">
@@ -2353,7 +2353,7 @@ To some extent, the incidence of these difficulties can be reduced by
    wide perception that NAT functionality is the same as a stateful
    firewall.  It is not.  The translation function of the NAT only
    creates dynamic state in one direction and has no policy.  For this
-   reason, it is RECOMMENDED that NPTv6 Translators also implement
+   reason, it is <span class="bcp14">RECOMMENDED</span> that NPTv6 Translators also implement
    firewall functionality such as described in <span>[<a href="#RFC6092" class="cite xref">RFC6092</a>]</span>, with
    appropriate configuration options including turning it on or off.<a href="#section-9-2" class="pilcrow">¶</a></p>
 <p id="section-9-3">When <span>[<a href="#RFC4864" class="cite xref">RFC4864</a>]</span> talks about randomizing the subnet identifier, the
@@ -2403,6 +2403,10 @@ To some extent, the incidence of these difficulties can be reduced by
 <dt id="RFC2119">[RFC2119]</dt>
         <dd>
 <span class="refAuthor">Bradner, S.</span>, <span class="refTitle">"Key words for use in RFCs to Indicate Requirement Levels"</span>, <span class="seriesInfo">BCP 14</span>, <span class="seriesInfo">RFC 2119</span>, <span class="seriesInfo">DOI 10.17487/RFC2119</span>, <time datetime="1997-03" class="refDate">March 1997</time>, <span>&lt;<a href="https://www.rfc-editor.org/info/rfc2119">https://www.rfc-editor.org/info/rfc2119</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC8174">[RFC8174]</dt>
+        <dd>
+<span class="refAuthor">Leiba, B.</span>, <span class="refTitle">"Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words"</span>, <span class="seriesInfo">BCP 14</span>, <span class="seriesInfo">RFC 8174</span>, <span class="seriesInfo">DOI 10.17487/RFC8174</span>, <time datetime="2017-05" class="refDate">May 2017</time>, <span>&lt;<a href="https://www.rfc-editor.org/info/rfc8174">https://www.rfc-editor.org/info/rfc8174</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC4291">[RFC4291]</dt>
         <dd>
@@ -2607,18 +2611,20 @@ To some extent, the incidence of these difficulties can be reduced by
    burden placed either on the ISP or the edge network as a result.
    From an application perspective, an additional operational
    requirement in the words of the Roadmap for the Smart Grid <span>[<a href="#NIST" class="cite xref">NIST</a>]</span> is
-   that
-~~~~~~~~~~
-      "...the network should provide the capability to enable an
-      application in a particular domain to communicate with an
-      application in any other domain over the information network, with
-      proper management control as to who and where applications can be
-      inter-connected."
-~~~~~~~~~~
-   In other words, the structure of the network should allow for and
+   that:<a href="#appendix-A-5" class="pilcrow">¶</a></p>
+<ul class="normal ulEmpty">
+<li class="normal ulEmpty" id="appendix-A-6.1">
+          <p id="appendix-A-6.1.1">"...the network should provide the capability to enable an
+application in a particular domain to communicate with an
+application in any other domain over the information network, with
+proper management control as to who and where applications can be
+inter-connected."<a href="#appendix-A-6.1.1" class="pilcrow">¶</a></p>
+</li>
+      </ul>
+<p id="appendix-A-7">In other words, the structure of the network should allow for and
    enable appropriate access control, but the structure of the network
-   should not inherently limit access.<a href="#appendix-A-5" class="pilcrow">¶</a></p>
-<p id="appendix-A-6">The GSE model, by statelessly translating the prefix between an edge
+   should not inherently limit access.<a href="#appendix-A-7" class="pilcrow">¶</a></p>
+<p id="appendix-A-8">The GSE model, by statelessly translating the prefix between an edge
    network and its upstream transit network, accomplishes that with a
    minimum of fuss and bother.  Stated in the simplest terms, it enables
    the edge network to behave as if it has a provider-independent prefix
@@ -2626,7 +2632,7 @@ To some extent, the incidence of these difficulties can be reduced by
    of RIR membership or maintenance of BGP connectivity, and it enables
    the transit networks to aggressively aggregate what are from their
    perspective provider-allocated customer prefixes, to maintain a
-   rational-sized routing table.<a href="#appendix-A-6" class="pilcrow">¶</a></p>
+   rational-sized routing table.<a href="#appendix-A-8" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="verification-code">
@@ -2643,7 +2649,7 @@ To some extent, the incidence of these difficulties can be reduced by
    purpose of the code was to verify whether or not it was necessary to
    suppress 0xFFFF by overwriting with zero and whether predicted issues
    with subnet numbering were real.<a href="#appendix-B-1" class="pilcrow">¶</a></p>
-<p id="appendix-B-2">The point is to<a href="#appendix-B-2" class="pilcrow">¶</a></p>
+<p id="appendix-B-2">The point is to:<a href="#appendix-B-2" class="pilcrow">¶</a></p>
 <ul class="normal">
 <li class="normal" id="appendix-B-3.1">
           <p id="appendix-B-3.1.1">demonstrate that if one or the other representation of zero is not
@@ -2668,8 +2674,9 @@ In short, in one's complement arithmetic, x-x=0 but will take the
  networks with a /48 external prefix.<a href="#appendix-B-3.2.2" class="pilcrow">¶</a></p>
 </li>
       </ul>
-<div class="alignLeft art-text artwork" id="appendix-B-4">
-<pre>
+<div class="breakable sourcecode" id="appendix-B-4">
+<pre>&lt;CODE BEGINS&gt;
+
   /*
    * Copyright (c) 2011 IETF Trust and the persons identified as
    * authors of the code.  All rights reserved.
@@ -2964,7 +2971,8 @@ In short, in one's complement arithmetic, x-x=0 but will take the
       }
   }
 
-</pre><a href="#appendix-B-4" class="pilcrow">¶</a>
+
+&lt;CODE ENDS&gt;</pre><a href="#appendix-B-4" class="pilcrow">¶</a>
 </div>
 </section>
 </div>

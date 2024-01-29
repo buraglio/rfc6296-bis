@@ -6,11 +6,11 @@
 Internet-Draft                                         Painless Security
 Obsoletes: 6296 (if approved)                                   F. Baker
 Intended status: Standards Track                            Unaffiliated
-Expires: 29 July 2024                                           O. Troan
+Expires: 1 August 2024                                          O. Troan
                                                            Cisco Systems
                                                              N. Buraglio
                                                  Energy Sciences Network
-                                                         26 January 2024
+                                                         29 January 2024
 
 
           RFC 6296bis IPv6-to-IPv6 Network Prefix Translation
@@ -47,7 +47,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 29 July 2024.
+   This Internet-Draft will expire on 1 August 2024.
 
 Copyright Notice
 
@@ -162,7 +162,8 @@ Table of Contents
    *  TCP sessions that authenticate peers using the TCP Authentication
       Option [RFC5925] cannot have their addresses translated, as the
       addresses are used in the calculation of the Message
-      Authentication Code.  This consideration applies in general to any
+      Authentication Code.  This consideration applies in general to
+      any.
 
    *  Unilateral Self-Address Fixing (UNSAF) [RFC3424] Protocol, which
       the IAB recommends against the deployment of in an environment
@@ -310,8 +311,10 @@ Table of Contents
 1.3.  Requirements Terminology
 
    The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
-   "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this
-   document are to be interpreted as described in RFC 2119 [RFC2119].
+   "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and
+   "OPTIONAL" in this document are to be interpreted as described in
+   BCP 14 [RFC2119] [RFC8174] when, and only when, they appear in all
+   capitals, as shown here.
 
 2.  NPTv6 Overview
 
@@ -503,19 +506,18 @@ Table of Contents
 3.  NPTv6 Algorithmic Specification
 
    The [RFC4291] IPv6 Address is reproduced for clarity in Figure 5.
-   ~~~~~~~~~~
 
-  0    15 16   31 32   47 48   63 64   79 80   95 96  111 112  127
- +-------+-------+-------+-------+-------+-------+-------+-------+
- |     Routing Prefix    | Subnet|   Interface Identifier (IID)  |
- +-------+-------+-------+-------+-------+-------+-------+-------+
+        0    15 16   31 32   47 48   63 64   79 80   95 96  111 112  127
+       +-------+-------+-------+-------+-------+-------+-------+-------+
+       |     Routing Prefix    | Subnet|   Interface Identifier (IID)  |
+       +-------+-------+-------+-------+-------+-------+-------+-------+
 
-        Figure 5: Enumeration of the IPv6 Address {{RFC4291}} ~~~~~~~~~~
+              Figure 5: Enumeration of the IPv6 Address {{RFC4291}}
 
 3.1.  NPTv6 Configuration Calculations
 
    When an NPTv6 Translation function is configured, it is configured
-   with
+   with:
 
    *  one or more "internal" interfaces with their "internal" routing
       domain prefixes, and
@@ -1064,6 +1066,10 @@ Table of Contents
               DOI 10.17487/RFC2119, March 1997,
               <https://www.rfc-editor.org/info/rfc2119>.
 
+   [RFC8174]  Leiba, B., "Ambiguity of Uppercase vs Lowercase in RFC
+              2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174,
+              May 2017, <https://www.rfc-editor.org/info/rfc8174>.
+
    [RFC4291]  Hinden, R. and S. Deering, "IP Version 6 Addressing
               Architecture", RFC 4291, DOI 10.17487/RFC4291, February
               2006, <https://www.rfc-editor.org/info/rfc4291>.
@@ -1280,13 +1286,17 @@ Appendix A.  Why GSE?
    burden placed either on the ISP or the edge network as a result.
    From an application perspective, an additional operational
    requirement in the words of the Roadmap for the Smart Grid [NIST] is
-   that ~~~~~~~~~~ "...the network should provide the capability to
-   enable an application in a particular domain to communicate with an
-   application in any other domain over the information network, with
-   proper management control as to who and where applications can be
-   inter-connected." ~~~~~~~~~~ In other words, the structure of the
-   network should allow for and enable appropriate access control, but
-   the structure of the network should not inherently limit access.
+   that:
+
+      "...the network should provide the capability to enable an
+      application in a particular domain to communicate with an
+      application in any other domain over the information network, with
+      proper management control as to who and where applications can be
+      inter-connected."
+
+   In other words, the structure of the network should allow for and
+   enable appropriate access control, but the structure of the network
+   should not inherently limit access.
 
    The GSE model, by statelessly translating the prefix between an edge
    network and its upstream transit network, accomplishes that with a
@@ -1310,7 +1320,7 @@ Appendix B.  Verification Code
    suppress 0xFFFF by overwriting with zero and whether predicted issues
    with subnet numbering were real.
 
-   The point is to
+   The point is to:
 
    *  demonstrate that if one or the other representation of zero is not
       used in the word in which the checksum is updated, the program
@@ -1333,299 +1343,301 @@ Appendix B.  Verification Code
       use 0xFFFF as a subnet number in networks with a /48 external
       prefix.
 
-  /*
-   * Copyright (c) 2011 IETF Trust and the persons identified as
-   * authors of the code.  All rights reserved.
-   *
-   * Redistribution and use in source and binary forms, with or without
-   * modification, are permitted provided that the following conditions
-   * are met:
-   *
-   * - Redistributions of source code must retain the above copyright
-   *   notice, this list of conditions and the following disclaimer.
-   *
-   * - Redistributions in binary form must reproduce the above
-   *   copyright notice, this list of conditions and the following
-   *   disclaimer in the documentation and/or other materials provided
-   *   with the distribution.
-   *
-   * - Neither the name of Internet Society, IETF or IETF Trust, nor
-   *   the names of specific contributors, may be used to endorse or
-   *   promote products derived from this software without specific
-   *   prior written permission.
-   *
-   * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND
-   * CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
-   * INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
-   * MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
-   * DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
-   * BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
-   * EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED
-   * TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-   * DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
-   * ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
-   * OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
-   * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
-   * POSSIBILITY OF SUCH DAMAGE.
-   */
-  #include "stdio.h"
-  #include "assert.h"
-  /*
-   * program to verify the NPTv6 algorithm
-   *
-   * argument:
-   *    Perform negative zero suppression: boolean
-   *
-   * method:
-   *    We specify an internal and an external prefix.  The prefix
-   *    length is presumed to be the common length of both and, for
-   *    this, is a /48.  We perform the three algorithms specified.
-   *    The "datagram" address is in effect the source address
-   *    internal->external and the destination address
-   *    external->internal.
-   */
-  unsigned short  inner_init[] = {
-      0xFD01, 0x0203, 0x0405, 1, 2, 3, 4, 5};
-  unsigned short  outer_init[] = {
-      0x2001, 0x0db8, 0x0001, 1, 2, 3, 4, 5};
-  unsigned short  inner[8];
-  unsigned short  datagram[8];
-  unsigned char   checksum[65536] = {0};
+   <CODE BEGINS>
+     /*
+      * Copyright (c) 2011 IETF Trust and the persons identified as
+      * authors of the code.  All rights reserved.
+      *
+      * Redistribution and use in source and binary forms, with or without
+      * modification, are permitted provided that the following conditions
+      * are met:
+      *
+      * - Redistributions of source code must retain the above copyright
+      *   notice, this list of conditions and the following disclaimer.
+      *
+      * - Redistributions in binary form must reproduce the above
+      *   copyright notice, this list of conditions and the following
+      *   disclaimer in the documentation and/or other materials provided
+      *   with the distribution.
+      *
+      * - Neither the name of Internet Society, IETF or IETF Trust, nor
+      *   the names of specific contributors, may be used to endorse or
+      *   promote products derived from this software without specific
+      *   prior written permission.
+      *
+      * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND
+      * CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+      * INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+      * MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+      * DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
+      * BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+      * EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED
+      * TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+      * DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+      * ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+      * OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+      * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+      * POSSIBILITY OF SUCH DAMAGE.
+      */
+     #include "stdio.h"
+     #include "assert.h"
+     /*
+      * program to verify the NPTv6 algorithm
+      *
+      * argument:
+      *    Perform negative zero suppression: boolean
+      *
+      * method:
+      *    We specify an internal and an external prefix.  The prefix
+      *    length is presumed to be the common length of both and, for
+      *    this, is a /48.  We perform the three algorithms specified.
+      *    The "datagram" address is in effect the source address
+      *    internal->external and the destination address
+      *    external->internal.
+      */
+     unsigned short  inner_init[] = {
+         0xFD01, 0x0203, 0x0405, 1, 2, 3, 4, 5};
+     unsigned short  outer_init[] = {
+         0x2001, 0x0db8, 0x0001, 1, 2, 3, 4, 5};
+     unsigned short  inner[8];
+     unsigned short  datagram[8];
+     unsigned char   checksum[65536] = {0};
 
-  unsigned short  outer[8];
-  unsigned short  adjustment;
-  unsigned short  suppress;
-  /*
-   * One's complement sum.
-   * return number1 + number2
-   */
-  unsigned short
-  add1(number1, number2)
-      unsigned short  number1;
-      unsigned short  number2;
-  {
-      unsigned int    result;
+     unsigned short  outer[8];
+     unsigned short  adjustment;
+     unsigned short  suppress;
+     /*
+      * One's complement sum.
+      * return number1 + number2
+      */
+     unsigned short
+     add1(number1, number2)
+         unsigned short  number1;
+         unsigned short  number2;
+     {
+         unsigned int    result;
 
-      result = number1;
-      result += number2;
-      if (suppress) {
-          while (0xFFFF <= result) {
-              result = result + 1 - 0x10000;
-          }
-      } else {
-          while (0xFFFF < result) {
-              result = result + 1 - 0x10000;
-          }
-      }
-      return result;
-  }
-
-  /*
-   * One's complement difference
-   * return number1 - number2
-   */
-  unsigned short
-  sub1(number1, number2)
-      unsigned short  number1;
-      unsigned short  number2;
-  {
-      return add1(number1, ~number2);
-  }
-
-  /*
-   * return one's complement sum of an array of numbers
-   */
-  unsigned short
-  sum1(numbers, count)
-      unsigned short *numbers;
-      int             count;
-  {
-      unsigned int    result;
-
-      result = *numbers++;
-      while (--count > 0) {
-          result += *numbers++;
-      }
-
-      if (suppress) {
-          while (0xFFFF <= result) {
-              result = result + 1 - 0x10000;
-          }
-      } else {
-          while (0xFFFF < result) {
-              result = result + 1 - 0x10000;
-          }
-      }
-      return result;
-  }
-
-  /*
-   * NPTv6 initialization: Section 3.1 assuming Section 3.4
-   *
-   * Create the /48, a source address in internal format, and a
-   * source address in external format.  Calculate the adjustment
-   * if one /48 is overwritten with the other.
-   */
-  void
-  nptv6_initialization(subnet)
-      unsigned short  subnet;
-  {
-      int             i;
-      unsigned short  inner48;
-      unsigned short  outer48;
-
-      /* Initialize the internal and external prefixes. */
-      for (i = 0; i < 8; i++) {
-          inner[i] = inner_init[i];
-          outer[i] = outer_init[i];
-      }
-      inner[3] = subnet;
-      outer[3] = subnet;
-      /* Calculate the checksum adjustment. */
-      inner48 = sum1(inner, 3);
-      outer48 = sum1(outer, 3);
-      adjustment = sub1(inner48, outer48);
-  }
-
-  /*
-   * NPTv6 datagram from edge to transit: Section 3.2 assuming
-   * Section 3.4
-   *
-   * Overwrite the prefix in the source address with the outer
-   * prefix and adjust the checksum.
-   */
-  void
-  nptv6_inner_to_outer()
-  {
-      int             i;
-
-      /* Let's get the source address into the datagram. */
-      for (i = 0; i < 8; i++) {
-          datagram[i] = inner[i];
-      }
-
-      /* Overwrite the prefix with the outer prefix. */
-      for (i = 0; i < 3; i++) {
-          datagram[i] = outer[i];
-      }
-
-      /* Adjust the checksum. */
-      datagram[3] = add1(datagram[3], adjustment);
-  }
-
-  /*
-   * NPTv6 datagram from transit to edge: Section 3.3 assuming
-   * Section 3.4
-   *
-   * Overwrite the prefix in the destination address with the
-   * inner prefix and adjust the checksum.
-   */
-  void
-  nptv6_outer_to_inner()
-  {
-      int             i;
-
-      /* Overwrite the prefix with the outer prefix. */
-      for (i = 0; i < 3; i++) {
-          datagram[i] = inner[i];
-      }
-
-      /* Adjust the checksum. */
-      datagram[3] = sub1(datagram[3], adjustment);
-  }
-
-  /*
-   * Main program
-   */
-  main(argc, argv)
-      int             argc;
-      char          **argv;
-  {
-      unsigned        subnet;
-      int             i;
-
-      if (argc < 2) {
-             fprintf(stderr, "usage: nptv6 supression\n");
-             assert(0);
+         result = number1;
+         result += number2;
+         if (suppress) {
+             while (0xFFFF <= result) {
+                 result = result + 1 - 0x10000;
+             }
+         } else {
+             while (0xFFFF < result) {
+                 result = result + 1 - 0x10000;
+             }
          }
-         suppress = atoi(argv[1]);
-         assert(suppress <= 1);
+         return result;
+     }
 
-         for (subnet = 0; subnet < 0x10000; subnet++) {
-             /* Section 3.1: initialize the system */
-             nptv6_initialization(subnet);
+     /*
+      * One's complement difference
+      * return number1 - number2
+      */
+     unsigned short
+     sub1(number1, number2)
+         unsigned short  number1;
+         unsigned short  number2;
+     {
+         return add1(number1, ~number2);
+     }
 
-             /* Section 3.2: take a datagram from inside to outside */
-             nptv6_inner_to_outer();
+     /*
+      * return one's complement sum of an array of numbers
+      */
+     unsigned short
+     sum1(numbers, count)
+         unsigned short *numbers;
+         int             count;
+     {
+         unsigned int    result;
 
-             /* The resulting checksum value should be unique. */
-             if (checksum[subnet]) {
-                  printf("inner->outer duplicated checksum: "
-                         "inner: %x:%x:%x:%x:%x:%x:%x:%x(%x) "
-                         "calculated: %x:%x:%x:%x:%x:%x:%x:%x(%x)\n",
-                         inner[0], inner[1], inner[2], inner[3],
-                         inner[4], inner[5], inner[6], inner[7],
-                         sum1(inner, 8), datagram[0], datagram[1],
-                         datagram[2], datagram[3], datagram[4],
-                         datagram[5], datagram[6], datagram[7],
-                         sum1(datagram, 8));
-          }
+         result = *numbers++;
+         while (--count > 0) {
+             result += *numbers++;
+         }
 
-          checksum[subnet] = 1;
+         if (suppress) {
+             while (0xFFFF <= result) {
+                 result = result + 1 - 0x10000;
+             }
+         } else {
+             while (0xFFFF < result) {
+                 result = result + 1 - 0x10000;
+             }
+         }
+         return result;
+     }
 
-          /*
-           * The resulting checksum should be the same as the inner
-           * address's checksum.
-           */
-          if (sum1(datagram, 8) != sum1(inner, 8)) {
-              printf("inner->outer incorrect: "
-                     "inner: %x:%x:%x:%x:%x:%x:%x:%x(%x) "
-                     "calculated: %x:%x:%x:%x:%x:%x:%x:%x(%x)\n",
-                     inner[0], inner[1], inner[2], inner[3],
-                     inner[4], inner[5], inner[6], inner[7],
-                     sum1(inner, 8),
-                     datagram[0], datagram[1], datagram[2], datagram[3],
-                     datagram[4], datagram[5], datagram[6], datagram[7],
-                     sum1(datagram, 8));
-          }
+     /*
+      * NPTv6 initialization: Section 3.1 assuming Section 3.4
+      *
+      * Create the /48, a source address in internal format, and a
+      * source address in external format.  Calculate the adjustment
+      * if one /48 is overwritten with the other.
+      */
+     void
+     nptv6_initialization(subnet)
+         unsigned short  subnet;
+     {
+         int             i;
+         unsigned short  inner48;
+         unsigned short  outer48;
 
-          /* Section 3.3: take a datagram from outside to inside */
-          nptv6_outer_to_inner();
+         /* Initialize the internal and external prefixes. */
+         for (i = 0; i < 8; i++) {
+             inner[i] = inner_init[i];
+             outer[i] = outer_init[i];
+         }
+         inner[3] = subnet;
+         outer[3] = subnet;
+         /* Calculate the checksum adjustment. */
+         inner48 = sum1(inner, 3);
+         outer48 = sum1(outer, 3);
+         adjustment = sub1(inner48, outer48);
+     }
 
-          /*
-           * The returning datagram should have the same checksum it
-           * left with.
-           */
-          if (sum1(datagram, 8) != sum1(inner, 8)) {
-              printf("outer->inner checksum incorrect: "
-                     "calculated: %x:%x:%x:%x:%x:%x:%x:%x(%x) "
-                     "inner: %x:%x:%x:%x:%x:%x:%x:%x(%x)\n",
-                     datagram[0], datagram[1], datagram[2], datagram[3],
-                     datagram[4], datagram[5], datagram[6], datagram[7],
-                     sum1(datagram, 8), inner[0], inner[1], inner[2],
-                     inner[3], inner[4], inner[5], inner[6], inner[7],
-                     sum1(inner, 8));
-          }
+     /*
+      * NPTv6 datagram from edge to transit: Section 3.2 assuming
+      * Section 3.4
+      *
+      * Overwrite the prefix in the source address with the outer
+      * prefix and adjust the checksum.
+      */
+     void
+     nptv6_inner_to_outer()
+     {
+         int             i;
 
-          /*
-           * And every octet should calculate back to the same inner
-           * value.
-           */
-          for (i = 0; i < 8; i++) {
-              if (inner[i] != datagram[i]) {
-                  printf("outer->inner different: "
-                         "calculated: %x:%x:%x:%x:%x:%x:%x:%x "
-                         "inner: %x:%x:%x:%x:%x:%x:%x:%x\n",
-                         datagram[0], datagram[1], datagram[2],
-                         datagram[3], datagram[4], datagram[5],
-                         datagram[6], datagram[7], inner[0], inner[1],
-                         inner[2], inner[3], inner[4], inner[5],
-                         inner[6], inner[7]);
-                  break;
-              }
-          }
-      }
-  }
+         /* Let's get the source address into the datagram. */
+         for (i = 0; i < 8; i++) {
+             datagram[i] = inner[i];
+         }
+
+         /* Overwrite the prefix with the outer prefix. */
+         for (i = 0; i < 3; i++) {
+             datagram[i] = outer[i];
+         }
+
+         /* Adjust the checksum. */
+         datagram[3] = add1(datagram[3], adjustment);
+     }
+
+     /*
+      * NPTv6 datagram from transit to edge: Section 3.3 assuming
+      * Section 3.4
+      *
+      * Overwrite the prefix in the destination address with the
+      * inner prefix and adjust the checksum.
+      */
+     void
+     nptv6_outer_to_inner()
+     {
+         int             i;
+
+         /* Overwrite the prefix with the outer prefix. */
+         for (i = 0; i < 3; i++) {
+             datagram[i] = inner[i];
+         }
+
+         /* Adjust the checksum. */
+         datagram[3] = sub1(datagram[3], adjustment);
+     }
+
+     /*
+      * Main program
+      */
+     main(argc, argv)
+         int             argc;
+         char          **argv;
+     {
+         unsigned        subnet;
+         int             i;
+
+         if (argc < 2) {
+                fprintf(stderr, "usage: nptv6 supression\n");
+                assert(0);
+            }
+            suppress = atoi(argv[1]);
+            assert(suppress <= 1);
+
+            for (subnet = 0; subnet < 0x10000; subnet++) {
+                /* Section 3.1: initialize the system */
+                nptv6_initialization(subnet);
+
+                /* Section 3.2: take a datagram from inside to outside */
+                nptv6_inner_to_outer();
+
+                /* The resulting checksum value should be unique. */
+                if (checksum[subnet]) {
+                     printf("inner->outer duplicated checksum: "
+                            "inner: %x:%x:%x:%x:%x:%x:%x:%x(%x) "
+                            "calculated: %x:%x:%x:%x:%x:%x:%x:%x(%x)\n",
+                            inner[0], inner[1], inner[2], inner[3],
+                            inner[4], inner[5], inner[6], inner[7],
+                            sum1(inner, 8), datagram[0], datagram[1],
+                            datagram[2], datagram[3], datagram[4],
+                            datagram[5], datagram[6], datagram[7],
+                            sum1(datagram, 8));
+             }
+
+             checksum[subnet] = 1;
+
+             /*
+              * The resulting checksum should be the same as the inner
+              * address's checksum.
+              */
+             if (sum1(datagram, 8) != sum1(inner, 8)) {
+                 printf("inner->outer incorrect: "
+                        "inner: %x:%x:%x:%x:%x:%x:%x:%x(%x) "
+                        "calculated: %x:%x:%x:%x:%x:%x:%x:%x(%x)\n",
+                        inner[0], inner[1], inner[2], inner[3],
+                        inner[4], inner[5], inner[6], inner[7],
+                        sum1(inner, 8),
+                        datagram[0], datagram[1], datagram[2], datagram[3],
+                        datagram[4], datagram[5], datagram[6], datagram[7],
+                        sum1(datagram, 8));
+             }
+
+             /* Section 3.3: take a datagram from outside to inside */
+             nptv6_outer_to_inner();
+
+             /*
+              * The returning datagram should have the same checksum it
+              * left with.
+              */
+             if (sum1(datagram, 8) != sum1(inner, 8)) {
+                 printf("outer->inner checksum incorrect: "
+                        "calculated: %x:%x:%x:%x:%x:%x:%x:%x(%x) "
+                        "inner: %x:%x:%x:%x:%x:%x:%x:%x(%x)\n",
+                        datagram[0], datagram[1], datagram[2], datagram[3],
+                        datagram[4], datagram[5], datagram[6], datagram[7],
+                        sum1(datagram, 8), inner[0], inner[1], inner[2],
+                        inner[3], inner[4], inner[5], inner[6], inner[7],
+                        sum1(inner, 8));
+             }
+
+             /*
+              * And every octet should calculate back to the same inner
+              * value.
+              */
+             for (i = 0; i < 8; i++) {
+                 if (inner[i] != datagram[i]) {
+                     printf("outer->inner different: "
+                            "calculated: %x:%x:%x:%x:%x:%x:%x:%x "
+                            "inner: %x:%x:%x:%x:%x:%x:%x:%x\n",
+                            datagram[0], datagram[1], datagram[2],
+                            datagram[3], datagram[4], datagram[5],
+                            datagram[6], datagram[7], inner[0], inner[1],
+                            inner[2], inner[3], inner[4], inner[5],
+                            inner[6], inner[7]);
+                     break;
+                 }
+             }
+         }
+     }
+   <CODE ENDS>
 
 Authors' Addresses
 
