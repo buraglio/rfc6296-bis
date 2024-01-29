@@ -283,7 +283,7 @@ limit the ability to use subnets in the shorter.
 
 ~~~~~~~~~~
 
-               External Network:  Prefix = 2001:0DB8:0001:/48
+               External Network:  Prefix = 2001:db8:0001::/48
                    --------------------------------------
                                      |
                                      |
@@ -294,7 +294,7 @@ limit the ability to use subnets in the shorter.
                                      |
                                      |
                    --------------------------------------
-               Internal Network:  Prefix = FD01:0203:0405:/48
+               Internal Network:  Prefix = fd01:0203:0405::/48
 
                        Figure 1: A Simple Translator
 ~~~~~~~~~~
@@ -313,10 +313,10 @@ corresponding external prefix.  When datagrams are forwarded in the
 network, the IPv6 destination prefix is overwritten with a
 corresponding internal prefix.  Using the prefixes shown in the
 diagram above, as an IP datagram passes through the NPTv6 Translator
-in the outbound direction, the source prefix (FD01:0203:0405:/48)
-will be overwritten with the external prefix (2001:0DB8:0001:/48).
-In an inbound datagram, the destination prefix (2001:0DB8:0001:/48)
-will be overwritten with the internal prefix (FD01:0203:0405:/48).
+in the outbound direction, the source prefix (fd01:0203:0405::/48)
+will be overwritten with the external prefix (2001:db8:0001::/48).
+In an inbound datagram, the destination prefix (2001:db8:0001::/48)
+will be overwritten with the internal prefix (fd01:0203:0405::/48).
 In both cases, it is the local IPv6 prefix that is overwritten; the
 remote IPv6 prefix remains unchanged.  Nodes on the internal network
 are said to be "behind" the NPTv6 Translator.
@@ -331,18 +331,18 @@ are said to be "behind" the NPTv6 Translator.
 
 ~~~~~~~~~~
 
-                  Internal Prefix = FD01:4444:5555:/48
+                  Internal Prefix = fd01:4444:5555::/48
                   --------------------------------------
                        V            |      External Prefix
-                       V            |      2001:0DB8:6666:/48
+                       V            |      2001:db8:6666::/48
                        V        +---------+      ^
                        V        |  NPTv6  |      ^
                        V        |  Device |      ^
                        V        +---------+      ^
               External Prefix       |            ^
-              2001:0DB8:0001:/48    |            ^
+              2001:db8:0001::/48    |            ^
                   --------------------------------------
-                  Internal Prefix = FD01:0203:0405:/48
+                  Internal Prefix = fd01:0203:0405::/48
 
                Figure 2: Flow of Information in Translation
 ~~~~~~~~~~
@@ -358,7 +358,7 @@ are said to be "behind" the NPTv6 Translator.
 
 ~~~~~~~~~~
 
-               External Network:  Prefix = 2001:0DB8:0001:/48
+               External Network:  Prefix = 2001:db8:0001::/48
                    --------------------------------------
                           |                      |
                           |                      |
@@ -370,7 +370,7 @@ are said to be "behind" the NPTv6 Translator.
                           |                      |
                           |                      |
                    --------------------------------------
-               Internal Network:  Prefix = FD01:0203:0405:/48
+               Internal Network:  Prefix = fd01:0203:0405::/48
 
                       Figure 3: Parallel Translators
 ~~~~~~~~~~
@@ -379,7 +379,7 @@ are said to be "behind" the NPTv6 Translator.
 
 ~~~~~~~~~~
             External Network #1:          External Network #2:
-         Prefix = 2001:0DB8:0001:/48    Prefix = 2001:0DB8:5555:/48
+         Prefix = 2001:db8:0001::/48    Prefix = 2001:db8:5555::/48
          ---------------------------    --------------------------
                          |                      |
                          |                      |
@@ -391,7 +391,7 @@ are said to be "behind" the NPTv6 Translator.
                          |                      |
                          |                      |
                   --------------------------------------
-              Internal Network:  Prefix = FD01:0203:0405:/48
+              Internal Network:  Prefix = fd01:0203:0405::/48
 
       Figure 4: Parallel Translators with Different Upstream Networks
 ~~~~~~~~~~
@@ -567,12 +567,12 @@ are said to be "behind" the NPTv6 Translator.
 
 ##  /48 Prefix Mapping Example
 
-   For the network shown in Figure 1, the Internal Prefix is FD01:0203:
-   0405:/48, and the External Prefix is 2001:0DB8:0001:/48.
+   For the network shown in Figure 1, the Internal Prefix is fd01:0203:
+   0405::/48, and the External Prefix is 2001:db8:0001::/48.
 
-   If a node with internal address FD01:0203:0405:0001::1234 sends an
+   If a node with internal address fd01:0203:0405:0001::1234 sends an
    outbound datagram through the NPTv6 Translator, the resulting
-   external address will be 2001:0DB8:0001:D550::1234.  The resulting
+   external address will be 2001:db8:0001:d550::1234.  The resulting
    address is obtained by calculating the checksum of both the internal
    and external 48-bit prefixes, subtracting the internal prefix from
    the external prefix using one's complement arithmetic to calculate
@@ -581,18 +581,18 @@ are said to be "behind" the NPTv6 Translator.
 
    To show the work:
 
-   The one's complement checksum of FD01:0203:0405 is 0xFCF5.  The one's
-   complement checksum of 2001:0DB8:0001 is 0xD245.  Using one's
+   The one's complement checksum of fd01:0203:0405 is 0xFCF5.  The one's
+   complement checksum of 2001:db8:0001 is 0xD245.  Using one's
    complement arithmetic, 0xD245 - 0xFCF5 = 0xD54F.  The subnet in the
    original datagram is 0x0001.  Using one's complement arithmetic,
    0x0001 + 0xD54F = 0xD550.  Since 0xD550 != 0xFFFF, it is not changed
    to 0x0000.
 
    So, the value 0xD550 is written in the 16-bit subnet area, resulting
-   in a mapped external address of 2001:0DB8:0001:D550::1234.
+   in a mapped external address of 2001:db8:0001:d550::1234.
 
    When a response datagram is received, it will contain the destination
-   address 2001:0DB8:0001:D550::1234, which will be mapped back to FD01:
+   address 2001:db8:0001:d550::1234, which will be mapped back to fd01:
    0203:0405:0001::1234 using the inverse mapping algorithm.
 
    In this case, the difference between the two prefixes will be
@@ -1457,6 +1457,8 @@ are said to be "behind" the NPTv6 Translator.
 * Revision 03
    - Updated references to updated RFCs. RFC 5996, RFC 6204, RFC 5389, RFC 5766, RFC 5245, RFC6145.
    - Added changes from RFC6296 section (this)
+   - Boilerplate text to Implementation status
+   - Update IPv6 addresses to be 5952 compliant
 
 * Revision 02
    - Added section on implementation status
