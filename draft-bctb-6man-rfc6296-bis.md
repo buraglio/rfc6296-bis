@@ -115,9 +115,9 @@ ramifications:
       that changes Internet addresses.
 
 * Applications using the Internet Key Exchange Protocol Version 2
-      (IKEv2) {{?RFC5996}} should, at least in theory, detect the presence
+      (IKEv2) {{?RFC7296}} should, at least in theory, detect the presence
       of the translator; while no NAT traversal solution is required,
-      {{RFC5996}} would require such sessions to use UDP.
+      {{RFC7296}} would require such sessions to use UDP.
 
 ##  What is Address Independence?
 
@@ -404,7 +404,7 @@ are said to be "behind" the NPTv6 Translator.
    (prefix and IID) to the common internal address.  A system within the
    edge network is unable to determine which external address it is
    using apart from services such as Session Traversal Utilities for NAT
-   (STUN) {{RFC5389}}.
+   (STUN) {{RFC8489}}.
 
    Multihoming in this sense has one negative feature as compared with
    multihoming with a provider-independent address: when routes change
@@ -684,7 +684,7 @@ are said to be "behind" the NPTv6 Translator.
    addresses on command.  Since the most common place anticipated for
    the implementation of an NPTv6 Translator is a Customer Premises
    Equipment (CPE) router, the reader is urged to consider the
-   requirements of {{?RFC6204}}.
+   requirements of {{?RFC7084}}.
 
 ##  Subnet Numbering
 
@@ -809,9 +809,9 @@ are said to be "behind" the NPTv6 Translator.
 
 ##  Recommendations for Application Writers
 
-   Several mechanisms (e.g., STUN {{?RFC5389}}, Traversal Using Relays
-   around NAT (TURN) {{?RFC5766}}, and Interactive Connectivity
-   Establishment (ICE) {{?RFC5245}}) have been used with traditional IPv4
+   Several mechanisms (e.g., STUN {{?RFC8489}}, Traversal Using Relays
+   around NAT (TURN) {{?RFC8656}}, and Interactive Connectivity
+   Establishment (ICE) {{?RFC8445}}) have been used with traditional IPv4
    NAT to circumvent some of the limitations of such devices.  Similar
    mechanisms could also be applied to circumvent some of the issues
    with an NPTv6 Translator.  However, all of these require the
@@ -827,7 +827,7 @@ are said to be "behind" the NPTv6 Translator.
    a mechanism were to be defined, it would ideally be general enough to
    also accommodate other types of NAT likely to be encountered by IPV6
    applications, in particular IPv4/IPv6 Translation {{?RFC6144}} {{?RFC6147}}
-   {{?RFC6145}} {{?RFC6146}} {{?RFC6052}}.  For this and other reasons, such a
+   {{?RFC7915}} {{?RFC6146}} {{?RFC6052}}.  For this and other reasons, such a
    mechanism is beyond the scope of this document.
 
 #  A Note on Port Mapping
@@ -1429,3 +1429,21 @@ are said to be "behind" the NPTv6 Translator.
 
 <CODE ENDS>
 ~~~~~~~~~~~
+
+# Changes since RFC6296
+
+* Revision 03
+   - Updated references to updated RFCs. RFC 5996, RFC 6204, RFC 5389, RFC 5766, RFC 5245, RFC6145.
+   - Added changes from RFC6296 section (this)
+
+* Revision 02
+   - Added section on implementation status
+   - Added section recommending against the use of ALG
+
+* Revision 01
+   - Added authors
+   - Added section on ICMPv6 error proxying
+   - Fixed errata 3033
+
+* Revision 00
+   - Converted to Markdown format from XML RFC6296 original.
