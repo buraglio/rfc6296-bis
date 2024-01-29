@@ -1014,10 +1014,12 @@ are said to be "behind" the NPTv6 Translator.
    document is based on email written by Iljtsch van Beijnum.
 
    The following people provided advice or review comments that
-   substantially improved this document: Allison Mankin, Christian
+   substantially improved the original RFC6296 document: Allison Mankin, Christian
    Huitema, Dave Thaler, Ed Jankiewicz, Eric Kline, Iljtsch van Beijnum,
    Jari Arkko, Keith Moore, Mark Townsley, Merike Kaeo, Ralph Droms,
    Remi Despres, Steve Blake, and Tony Hain.
+
+   The following people provided advice or review comments that substantially improved this revised document: Mohamed Boucadair.
 
 --- back
 
@@ -1460,8 +1462,9 @@ are said to be "behind" the NPTv6 Translator.
    - Updated references to updated RFCs. RFC 5996, RFC 6204, RFC 5389, RFC 5766, RFC 5245, RFC6145.
    - Added changes from RFC6296 section (this)
    - Boilerplate text to Implementation status
-   - Update IPv6 addresses to be 5952 compliant
+   - Update IPv6 addresses to be 5952 compliant.
    - Add note that this document obsoletes RFC6296.
+   - Add new sub-acknowledgement section.
 
 * Revision 02
    - Added section on implementation status
