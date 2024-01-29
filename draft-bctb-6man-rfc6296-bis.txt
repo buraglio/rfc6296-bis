@@ -25,6 +25,8 @@ Abstract
    "inside" and "outside" prefixes, preserving end-to-end reachability
    at the network layer.
 
+   This document obsoletes RFC 6296.
+
 Discussion Venues
 
    This note is to be removed before publishing as an RFC.
@@ -1681,6 +1683,8 @@ Appendix C.  Changes since RFC6296
       -  Boilerplate text to Implementation status
 
       -  Update IPv6 addresses to be 5952 compliant
+
+      -  Add note that this document obsoletes RFC6296.
 
    *  Revision 02
 
