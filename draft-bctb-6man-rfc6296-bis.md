@@ -90,7 +90,7 @@ ramifications:
 * Any security benefit that NAPT44 might offer is not present in
       NPTv6, necessitating the use of a firewall to obtain those
       benefits if desired.  An example of such a firewall is described
-      in {{?RFC692}}.
+      in {{?RFC6092}}.
 
 * End-to-end reachability is preserved, although the address used
       "inside" the edge network differs from the address used "outside"
@@ -255,7 +255,7 @@ agency from which it was allocated.
 There are significant technical impacts associated with the
 deployment of any prefix translation mechanism, including NPTv6, and
 we strongly encourage anyone who is considering the implementation or
-deployment of NPTv6 to read {{RFC4864}} and {{RFC592}}, and to carefully
+deployment of NPTv6 to read {{RFC4864}} and {{RFC5925}}, and to carefully
 consider the alternatives described in that document, some of which
 may cause fewer problems than NPTv6.
 
