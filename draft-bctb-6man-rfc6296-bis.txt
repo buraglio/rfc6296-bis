@@ -1074,10 +1074,13 @@ Table of Contents
    document is based on email written by Iljtsch van Beijnum.
 
    The following people provided advice or review comments that
-   substantially improved this document: Allison Mankin, Christian
-   Huitema, Dave Thaler, Ed Jankiewicz, Eric Kline, Iljtsch van Beijnum,
-   Jari Arkko, Keith Moore, Mark Townsley, Merike Kaeo, Ralph Droms,
-   Remi Despres, Steve Blake, and Tony Hain.
+   substantially improved the original RFC6296 document: Allison Mankin,
+   Christian Huitema, Dave Thaler, Ed Jankiewicz, Eric Kline, Iljtsch
+   van Beijnum, Jari Arkko, Keith Moore, Mark Townsley, Merike Kaeo,
+   Ralph Droms, Remi Despres, Steve Blake, and Tony Hain.
+
+   The following people provided advice or review comments that
+   substantially improved this revised document: Mohamed Boucadair.
 
 11.  References
 
@@ -1682,9 +1685,11 @@ Appendix C.  Changes since RFC6296
 
       -  Boilerplate text to Implementation status
 
-      -  Update IPv6 addresses to be 5952 compliant
+      -  Update IPv6 addresses to be 5952 compliant.
 
       -  Add note that this document obsoletes RFC6296.
+
+      -  Add new sub-acknowledgement section.
 
    *  Revision 02
 
