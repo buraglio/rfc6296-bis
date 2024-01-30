@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-01-28T01:13:38.536644+00:00",
+  "timestamp": "2024-01-30T01:08:37.546214+00:00",
   "repo": "buraglio/rfc6296-bis",
   "labels": [
     {
@@ -169,6 +169,150 @@
       "updatedAt": "2024-01-26T09:45:43Z",
       "closedAt": "2024-01-26T09:45:43Z",
       "comments": []
+    },
+    {
+      "number": 13,
+      "id": "I_kwDOKR0JGs59dL7M",
+      "title": "Outdated Text",
+      "url": "https://github.com/buraglio/rfc6296-bis/issues/13",
+      "state": "OPEN",
+      "author": "boucadair",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "https://github.com/buraglio/rfc6296-bis/blob/3609a71baf805fbdbe51855d0dd84a51f3198425/draft-bctb-6man-rfc6296-bis.md?plain=1#L823C1-L832C51\r\n\r\nWe do have a mechanism to fill that void since then: RFC6887. \r\n\r\nI suggest to update that section accordingly.",
+      "createdAt": "2024-01-29T07:10:37Z",
+      "updatedAt": "2024-01-29T07:10:37Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 14,
+      "id": "I_kwDOKR0JGs59e2Rj",
+      "title": "Update abstract",
+      "url": "https://github.com/buraglio/rfc6296-bis/issues/14",
+      "state": "CLOSED",
+      "author": "otroan",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "(1) Update the abstract to indicate that this document obsoletes RFC 6296.\r\n\r\nReported by: Med.",
+      "createdAt": "2024-01-29T11:07:26Z",
+      "updatedAt": "2024-01-29T12:12:55Z",
+      "closedAt": "2024-01-29T12:12:55Z",
+      "comments": []
+    },
+    {
+      "number": 15,
+      "id": "I_kwDOKR0JGs59e2h4",
+      "title": "Section for list of changes since 6296",
+      "url": "https://github.com/buraglio/rfc6296-bis/issues/15",
+      "state": "CLOSED",
+      "author": "otroan",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "(2) Consider adding a subsection or an appendix with a list of changes vs. 6296 as per this Guidelines \"Ensure the I-D clearly summarizes any changes made from the RFCs being updated or obsoleted.\". I would list in particular there that erratum https://www.rfc-editor.org/errata/eid3033 was implemented.\r\n\r\nReported by: Med",
+      "createdAt": "2024-01-29T11:08:00Z",
+      "updatedAt": "2024-01-29T12:10:29Z",
+      "closedAt": "2024-01-29T12:10:29Z",
+      "comments": []
+    },
+    {
+      "number": 16,
+      "id": "I_kwDOKR0JGs59e2xH",
+      "title": "Make IPv6 address examples consistent with RFC5952",
+      "url": "https://github.com/buraglio/rfc6296-bis/issues/16",
+      "state": "CLOSED",
+      "author": "otroan",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "(3) Update all IPv6 address examples to be consistent with RFC 5952.\r\n\r\nReported by Med",
+      "createdAt": "2024-01-29T11:08:31Z",
+      "updatedAt": "2024-01-29T12:10:21Z",
+      "closedAt": "2024-01-29T12:10:21Z",
+      "comments": []
+    },
+    {
+      "number": 17,
+      "id": "I_kwDOKR0JGs59e2_O",
+      "title": "ALG text",
+      "url": "https://github.com/buraglio/rfc6296-bis/issues/17",
+      "state": "OPEN",
+      "author": "otroan",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "(4) Section 7:\r\n\r\n4.1. Please note that the \"NPTv6 Applicability\" section says the following:\r\n\r\n  These applications currently require\r\n  Application Layer Gateways (ALGs) to work correctly through NAPT44\r\n  devices, and similar ALGs may be required for these applications to\r\n  work through NPTv6 Translators.\r\n\r\n  Which may seem to be conflicting with the reco in Section 7. Please reword to avoid internal inconsistency.\r\n\r\n4.2. An approach to avoid ALGs is to discover the external prefix used by the NPTv6. A discovery approach is specified in https://datatracker.ietf.org/doc/html/rfc6887#section-2.1.\r\n\r\nReported by Med",
+      "createdAt": "2024-01-29T11:09:01Z",
+      "updatedAt": "2024-01-29T11:09:01Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 18,
+      "id": "I_kwDOKR0JGs59e3MW",
+      "title": "RFC7942 note",
+      "url": "https://github.com/buraglio/rfc6296-bis/issues/18",
+      "state": "CLOSED",
+      "author": "otroan",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "(5) Section 8: Add a note as per RFC 7942\r\n\r\n  Since this information is necessarily time dependent, it is\r\n  inappropriate for inclusion in a published RFC.  The authors should\r\n  include a note to the RFC Editor requesting that the section be\r\n  removed before publication.\r\n\r\n\r\nReported by Med",
+      "createdAt": "2024-01-29T11:09:29Z",
+      "updatedAt": "2024-01-29T12:04:37Z",
+      "closedAt": "2024-01-29T12:04:37Z",
+      "comments": []
+    },
+    {
+      "number": 19,
+      "id": "I_kwDOKR0JGs59e3XR",
+      "title": "Manageability text",
+      "url": "https://github.com/buraglio/rfc6296-bis/issues/19",
+      "state": "OPEN",
+      "author": "otroan",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "(6) Consider adding some text about the manageability of NPTv6. FWIW, you may refer for the provisioning of NPTv6 (https://datatracker.ietf.org/doc/html/rfc8512#autoid-33)\r\n\r\nReported by Med",
+      "createdAt": "2024-01-29T11:09:52Z",
+      "updatedAt": "2024-01-29T11:09:52Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 20,
+      "id": "I_kwDOKR0JGs59e3fg",
+      "title": "Update RFC references",
+      "url": "https://github.com/buraglio/rfc6296-bis/issues/20",
+      "state": "CLOSED",
+      "author": "otroan",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "(7) Update many RFCs as they were obsoleted since then (e.g., RFC 5996, RFC 6204, RFC 5389, RFC 5766, RFC 5245, ..)\r\n\r\nReported by Med",
+      "createdAt": "2024-01-29T11:10:10Z",
+      "updatedAt": "2024-01-29T11:57:17Z",
+      "closedAt": "2024-01-29T11:57:17Z",
+      "comments": []
+    },
+    {
+      "number": 22,
+      "id": "I_kwDOKR0JGs59fpBk",
+      "title": "IKEv2/IPsec NAT traversal",
+      "url": "https://github.com/buraglio/rfc6296-bis/issues/22",
+      "state": "OPEN",
+      "author": "boucadair",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "This text in the original RFC is OK as the intent was to conduct experiments. I'm afraid that is not appropriate to leave it as such in the bis:\r\n\r\n>  \r\n>   Due to the potential interactions with IKEv2/IPsec NAT traversal, it\r\n>    would be valuable to test interactions of NPTv6 with various aspects\r\n>    of current-day IKEv2/IPsec NAT traversal.",
+      "createdAt": "2024-01-29T12:58:39Z",
+      "updatedAt": "2024-01-29T12:58:39Z",
+      "closedAt": null,
+      "comments": []
     }
   ],
   "pulls": [
@@ -311,6 +455,150 @@
       },
       "comments": [],
       "reviews": []
+    },
+    {
+      "number": 12,
+      "id": "PR_kwDOKR0JGs5lSeK3",
+      "title": "minor nits/fixes",
+      "url": "https://github.com/buraglio/rfc6296-bis/pull/12",
+      "state": "MERGED",
+      "author": "boucadair",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2024-01-29T07:08:23Z",
+      "updatedAt": "2024-01-29T11:05:55Z",
+      "baseRepository": "buraglio/rfc6296-bis",
+      "baseRefName": "main",
+      "baseRefOid": "3609a71baf805fbdbe51855d0dd84a51f3198425",
+      "headRepository": "boucadair/rfc6296-bis",
+      "headRefName": "patch-1",
+      "headRefOid": "ab2a098f6636c8ff1a6afebb78bd662db6b96b13",
+      "closedAt": "2024-01-29T11:05:55Z",
+      "mergedAt": "2024-01-29T11:05:55Z",
+      "mergedBy": "otroan",
+      "mergeCommit": {
+        "oid": "dbd96cdcd0f4885c290c211b3c6566968add17b1"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOKR0JGs5uLHwi",
+          "commit": {
+            "abbreviatedOid": "ab2a098"
+          },
+          "author": "otroan",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "Looks good, thanks!",
+          "createdAt": "2024-01-29T11:05:32Z",
+          "updatedAt": "2024-01-29T11:05:32Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 21,
+      "id": "PR_kwDOKR0JGs5lUq7E",
+      "title": "Leading zeros MUST be suppressed as per RFC5952",
+      "url": "https://github.com/buraglio/rfc6296-bis/pull/21",
+      "state": "MERGED",
+      "author": "boucadair",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2024-01-29T12:55:50Z",
+      "updatedAt": "2024-01-29T13:02:37Z",
+      "baseRepository": "buraglio/rfc6296-bis",
+      "baseRefName": "main",
+      "baseRefOid": "90e3fbc28f5a66cb0c4e35d969cb49b136b127c3",
+      "headRepository": "boucadair/rfc6296-bis",
+      "headRefName": "patch-2",
+      "headRefOid": "1f3837b3f9acec07a3cf44c9d1e40841519b7914",
+      "closedAt": "2024-01-29T13:01:58Z",
+      "mergedAt": "2024-01-29T13:01:58Z",
+      "mergedBy": "otroan",
+      "mergeCommit": {
+        "oid": "78a6ec4fc726806dc64a2a550d88537b300c2294"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOKR0JGs5uL7pu",
+          "commit": {
+            "abbreviatedOid": "3f04bcb"
+          },
+          "author": "otroan",
+          "authorAssociation": "COLLABORATOR",
+          "state": "CHANGES_REQUESTED",
+          "body": "",
+          "createdAt": "2024-01-29T13:00:22Z",
+          "updatedAt": "2024-01-29T13:00:41Z",
+          "comments": [
+            {
+              "originalPosition": 12,
+              "body": "You probably don't want to make these leading zero changes to the RFC references. :-)",
+              "createdAt": "2024-01-29T13:00:22Z",
+              "updatedAt": "2024-01-29T13:00:41Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOKR0JGs5uL8Ag",
+          "commit": {
+            "abbreviatedOid": "fc0491a"
+          },
+          "author": "boucadair",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2024-01-29T13:01:08Z",
+          "updatedAt": "2024-01-29T13:01:08Z",
+          "comments": [
+            {
+              "originalPosition": 12,
+              "body": "```suggestion\r\ndeployment of NPTv6 to read {{RFC4864}} and {{RFC5902}}, and to carefully\r\n```",
+              "createdAt": "2024-01-29T13:01:08Z",
+              "updatedAt": "2024-01-29T13:01:08Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOKR0JGs5uL8TV",
+          "commit": {
+            "abbreviatedOid": "1f3837b"
+          },
+          "author": "otroan",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2024-01-29T13:01:50Z",
+          "updatedAt": "2024-01-29T13:01:50Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOKR0JGs5uL8rG",
+          "commit": {
+            "abbreviatedOid": "3f04bcb"
+          },
+          "author": "boucadair",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2024-01-29T13:02:37Z",
+          "updatedAt": "2024-01-29T13:02:37Z",
+          "comments": [
+            {
+              "originalPosition": 12,
+              "body": "ha ha ha. \r\n\r\nI don't know how this was changed, but I updated the PR.",
+              "createdAt": "2024-01-29T13:02:37Z",
+              "updatedAt": "2024-01-29T13:02:37Z"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
