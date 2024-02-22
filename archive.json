@@ -1,0 +1,604 @@
+{
+  "magic": "E!vIA5L86J2I",
+  "timestamp": "2024-02-22T01:08:06.007567+00:00",
+  "repo": "buraglio/rfc6296-bis",
+  "labels": [
+    {
+      "name": "bug",
+      "description": "Something isn't working",
+      "color": "d73a4a"
+    },
+    {
+      "name": "documentation",
+      "description": "Improvements or additions to documentation",
+      "color": "0075ca"
+    },
+    {
+      "name": "duplicate",
+      "description": "This issue or pull request already exists",
+      "color": "cfd3d7"
+    },
+    {
+      "name": "enhancement",
+      "description": "New feature or request",
+      "color": "a2eeef"
+    },
+    {
+      "name": "good first issue",
+      "description": "Good for newcomers",
+      "color": "7057ff"
+    },
+    {
+      "name": "help wanted",
+      "description": "Extra attention is needed",
+      "color": "008672"
+    },
+    {
+      "name": "invalid",
+      "description": "This doesn't seem right",
+      "color": "e4e669"
+    },
+    {
+      "name": "question",
+      "description": "Further information is requested",
+      "color": "d876e3"
+    },
+    {
+      "name": "wontfix",
+      "description": "This will not be worked on",
+      "color": "ffffff"
+    }
+  ],
+  "issues": [
+    {
+      "number": 1,
+      "id": "I_kwDOKR0JGs5zM31k",
+      "title": "ICMPv6 error proxy",
+      "url": "https://github.com/buraglio/rfc6296-bis/issues/1",
+      "state": "CLOSED",
+      "author": "otroan",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "To pass an ICMPv6 error message, the NPTv6 node needs to also translate the embedded IPv6 packet.\r\nThis would be an IPv6 variant of section 4 RFC5508.\r\nI haven't found other documents describing IPv6 NAT ICMP error handling.",
+      "createdAt": "2023-10-09T10:25:01Z",
+      "updatedAt": "2023-12-04T08:11:43Z",
+      "closedAt": "2023-12-04T08:11:42Z",
+      "comments": [
+        {
+          "author": "otroan",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Added in revision -01.",
+          "createdAt": "2023-12-04T08:11:43Z",
+          "updatedAt": "2023-12-04T08:11:43Z"
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "id": "I_kwDOKR0JGs5zOwPS",
+      "title": "Review section 5.3 on future work",
+      "url": "https://github.com/buraglio/rfc6296-bis/issues/3",
+      "state": "OPEN",
+      "author": "otroan",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Consider if a mechanism to get the outside address can be specified?\r\nSome sort of integration with STUN?",
+      "createdAt": "2023-10-09T14:43:27Z",
+      "updatedAt": "2023-10-09T14:43:27Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 4,
+      "id": "I_kwDOKR0JGs5ze_yW",
+      "title": "Recommendations regarding source address selection",
+      "url": "https://github.com/buraglio/rfc6296-bis/issues/4",
+      "state": "OPEN",
+      "author": "otroan",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "The typical use case for NTPv6 would be an internal network using ULA addressing.\r\nShould we ensure that SAS / Happy eyeballs give ULA -> GUA connections a decent chance? Consider them equivalent to IPv4 RFC1918 to global?\r\nDon't know if this is text in this document, or if we should try to affect the SAS bis document?",
+      "createdAt": "2023-10-11T11:09:35Z",
+      "updatedAt": "2023-10-11T15:06:56Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "buraglio",
+          "authorAssociation": "OWNER",
+          "body": "I just sent mail requesting WGLC for the 6724 update that sets preference for IPv4 below all IPv6, including ULA. I think that would cover the SAS in question here. There is significant appetite for fixing that based on the list discussion and the IETF 117 presentation. ",
+          "createdAt": "2023-10-11T15:06:55Z",
+          "updatedAt": "2023-10-11T15:06:55Z"
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "id": "I_kwDOKR0JGs54fcbi",
+      "title": "Obsoletes not Updates",
+      "url": "https://github.com/buraglio/rfc6296-bis/issues/9",
+      "state": "CLOSED",
+      "author": "becarpenter",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "This is a replacement for RFC 6296 so it should be Obsoletes: 6296",
+      "createdAt": "2023-12-01T20:01:56Z",
+      "updatedAt": "2023-12-04T08:11:19Z",
+      "closedAt": "2023-12-04T08:11:18Z",
+      "comments": [
+        {
+          "author": "otroan",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Fixed in revision -02.",
+          "createdAt": "2023-12-04T08:11:18Z",
+          "updatedAt": "2023-12-04T08:11:18Z"
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "id": "I_kwDOKR0JGs54mKYB",
+      "title": "Add implementation considerations section (RFC7942)",
+      "url": "https://github.com/buraglio/rfc6296-bis/issues/10",
+      "state": "CLOSED",
+      "author": "otroan",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "From Brian's suggestions",
+      "createdAt": "2023-12-04T08:12:35Z",
+      "updatedAt": "2024-01-26T09:45:31Z",
+      "closedAt": "2024-01-26T09:45:31Z",
+      "comments": []
+    },
+    {
+      "number": 11,
+      "id": "I_kwDOKR0JGs54mMYL",
+      "title": "Addressing text and ALG considerations section",
+      "url": "https://github.com/buraglio/rfc6296-bis/issues/11",
+      "state": "CLOSED",
+      "author": "otroan",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Remove \"at the mercy of\" and \"misuse\".\r\n\r\nI imagine that pushback will continue. In order to make the discussion rational rather than emotional, I think the \"NPTv6 Applicability\" section needs major work. There are generalisations like \"similar ALGs may be required for these applications to work through NPTv6 Translators\" and \"creates complexity for DNS deployment... 'split DNS', which may add complexity to network configuration\". I think that text needs to specify the necessary mitigations and give normative references.\r\n\r\nSimilarly the paragraph about ULAs is very tentative and needs to be much clearer. And its final sentence:\r\n\r\n\"Also, using any other global-scope address format makes one either obtain a PI prefix or be at the mercy of the agency from which it was allocated.\"\r\n\r\nseems wrong. Candidates to use NPTv6 seem unlikely to pay for a PI prefix, because they can multihome anyway. And you might get away with \"at the mercy of\" in an Experimental RFC, but surely not on the standards track.\r\n",
+      "createdAt": "2023-12-04T08:17:44Z",
+      "updatedAt": "2024-01-26T09:45:43Z",
+      "closedAt": "2024-01-26T09:45:43Z",
+      "comments": []
+    },
+    {
+      "number": 13,
+      "id": "I_kwDOKR0JGs59dL7M",
+      "title": "Outdated Text",
+      "url": "https://github.com/buraglio/rfc6296-bis/issues/13",
+      "state": "OPEN",
+      "author": "boucadair",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "https://github.com/buraglio/rfc6296-bis/blob/3609a71baf805fbdbe51855d0dd84a51f3198425/draft-bctb-6man-rfc6296-bis.md?plain=1#L823C1-L832C51\r\n\r\nWe do have a mechanism to fill that void since then: RFC6887. \r\n\r\nI suggest to update that section accordingly.",
+      "createdAt": "2024-01-29T07:10:37Z",
+      "updatedAt": "2024-01-29T07:10:37Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 14,
+      "id": "I_kwDOKR0JGs59e2Rj",
+      "title": "Update abstract",
+      "url": "https://github.com/buraglio/rfc6296-bis/issues/14",
+      "state": "CLOSED",
+      "author": "otroan",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "(1) Update the abstract to indicate that this document obsoletes RFC 6296.\r\n\r\nReported by: Med.",
+      "createdAt": "2024-01-29T11:07:26Z",
+      "updatedAt": "2024-01-29T12:12:55Z",
+      "closedAt": "2024-01-29T12:12:55Z",
+      "comments": []
+    },
+    {
+      "number": 15,
+      "id": "I_kwDOKR0JGs59e2h4",
+      "title": "Section for list of changes since 6296",
+      "url": "https://github.com/buraglio/rfc6296-bis/issues/15",
+      "state": "CLOSED",
+      "author": "otroan",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "(2) Consider adding a subsection or an appendix with a list of changes vs. 6296 as per this Guidelines \"Ensure the I-D clearly summarizes any changes made from the RFCs being updated or obsoleted.\". I would list in particular there that erratum https://www.rfc-editor.org/errata/eid3033 was implemented.\r\n\r\nReported by: Med",
+      "createdAt": "2024-01-29T11:08:00Z",
+      "updatedAt": "2024-01-29T12:10:29Z",
+      "closedAt": "2024-01-29T12:10:29Z",
+      "comments": []
+    },
+    {
+      "number": 16,
+      "id": "I_kwDOKR0JGs59e2xH",
+      "title": "Make IPv6 address examples consistent with RFC5952",
+      "url": "https://github.com/buraglio/rfc6296-bis/issues/16",
+      "state": "CLOSED",
+      "author": "otroan",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "(3) Update all IPv6 address examples to be consistent with RFC 5952.\r\n\r\nReported by Med",
+      "createdAt": "2024-01-29T11:08:31Z",
+      "updatedAt": "2024-01-29T12:10:21Z",
+      "closedAt": "2024-01-29T12:10:21Z",
+      "comments": []
+    },
+    {
+      "number": 17,
+      "id": "I_kwDOKR0JGs59e2_O",
+      "title": "ALG text",
+      "url": "https://github.com/buraglio/rfc6296-bis/issues/17",
+      "state": "OPEN",
+      "author": "otroan",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "(4) Section 7:\r\n\r\n4.1. Please note that the \"NPTv6 Applicability\" section says the following:\r\n\r\n  These applications currently require\r\n  Application Layer Gateways (ALGs) to work correctly through NAPT44\r\n  devices, and similar ALGs may be required for these applications to\r\n  work through NPTv6 Translators.\r\n\r\n  Which may seem to be conflicting with the reco in Section 7. Please reword to avoid internal inconsistency.\r\n\r\n4.2. An approach to avoid ALGs is to discover the external prefix used by the NPTv6. A discovery approach is specified in https://datatracker.ietf.org/doc/html/rfc6887#section-2.1.\r\n\r\nReported by Med",
+      "createdAt": "2024-01-29T11:09:01Z",
+      "updatedAt": "2024-01-29T11:09:01Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 18,
+      "id": "I_kwDOKR0JGs59e3MW",
+      "title": "RFC7942 note",
+      "url": "https://github.com/buraglio/rfc6296-bis/issues/18",
+      "state": "CLOSED",
+      "author": "otroan",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "(5) Section 8: Add a note as per RFC 7942\r\n\r\n  Since this information is necessarily time dependent, it is\r\n  inappropriate for inclusion in a published RFC.  The authors should\r\n  include a note to the RFC Editor requesting that the section be\r\n  removed before publication.\r\n\r\n\r\nReported by Med",
+      "createdAt": "2024-01-29T11:09:29Z",
+      "updatedAt": "2024-01-29T12:04:37Z",
+      "closedAt": "2024-01-29T12:04:37Z",
+      "comments": []
+    },
+    {
+      "number": 19,
+      "id": "I_kwDOKR0JGs59e3XR",
+      "title": "Manageability text",
+      "url": "https://github.com/buraglio/rfc6296-bis/issues/19",
+      "state": "OPEN",
+      "author": "otroan",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "(6) Consider adding some text about the manageability of NPTv6. FWIW, you may refer for the provisioning of NPTv6 (https://datatracker.ietf.org/doc/html/rfc8512#autoid-33)\r\n\r\nReported by Med",
+      "createdAt": "2024-01-29T11:09:52Z",
+      "updatedAt": "2024-01-29T11:09:52Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 20,
+      "id": "I_kwDOKR0JGs59e3fg",
+      "title": "Update RFC references",
+      "url": "https://github.com/buraglio/rfc6296-bis/issues/20",
+      "state": "CLOSED",
+      "author": "otroan",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "(7) Update many RFCs as they were obsoleted since then (e.g., RFC 5996, RFC 6204, RFC 5389, RFC 5766, RFC 5245, ..)\r\n\r\nReported by Med",
+      "createdAt": "2024-01-29T11:10:10Z",
+      "updatedAt": "2024-01-29T11:57:17Z",
+      "closedAt": "2024-01-29T11:57:17Z",
+      "comments": []
+    },
+    {
+      "number": 22,
+      "id": "I_kwDOKR0JGs59fpBk",
+      "title": "IKEv2/IPsec NAT traversal",
+      "url": "https://github.com/buraglio/rfc6296-bis/issues/22",
+      "state": "OPEN",
+      "author": "boucadair",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "This text in the original RFC is OK as the intent was to conduct experiments. I'm afraid that is not appropriate to leave it as such in the bis:\r\n\r\n>  \r\n>   Due to the potential interactions with IKEv2/IPsec NAT traversal, it\r\n>    would be valuable to test interactions of NPTv6 with various aspects\r\n>    of current-day IKEv2/IPsec NAT traversal.",
+      "createdAt": "2024-01-29T12:58:39Z",
+      "updatedAt": "2024-01-29T12:58:39Z",
+      "closedAt": null,
+      "comments": []
+    }
+  ],
+  "pulls": [
+    {
+      "number": 2,
+      "id": "PR_kwDOKR0JGs5cPwNJ",
+      "title": "Tweaks to make kramdown-rfc compile",
+      "url": "https://github.com/buraglio/rfc6296-bis/pull/2",
+      "state": "MERGED",
+      "author": "otroan",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Signed-off-by: Ole Troan <otroan@cisco.com>\n",
+      "createdAt": "2023-10-09T11:04:02Z",
+      "updatedAt": "2023-10-10T12:24:15Z",
+      "baseRepository": "buraglio/rfc6296-bis",
+      "baseRefName": "main",
+      "baseRefOid": "9b59a3bbe0767c345688a778e7d56176401d81d6",
+      "headRepository": "otroan/rfc6296-bis",
+      "headRefName": "main",
+      "headRefOid": "5adb6055825171d35f0cba99a367e87fb69846bf",
+      "closedAt": "2023-10-10T12:24:15Z",
+      "mergedAt": "2023-10-10T12:24:15Z",
+      "mergedBy": "buraglio",
+      "mergeCommit": {
+        "oid": "63a022621971a9dcbb08402666bd54afe3af90a8"
+      },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 5,
+      "id": "PR_kwDOKR0JGs5fA6Ir",
+      "title": "Adding authors, integrating errata",
+      "url": "https://github.com/buraglio/rfc6296-bis/pull/5",
+      "state": "MERGED",
+      "author": "otroan",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "- Add co-authors\n- Integrate Errata ID: 3033\n",
+      "createdAt": "2023-11-09T09:47:55Z",
+      "updatedAt": "2023-11-09T16:24:15Z",
+      "baseRepository": "buraglio/rfc6296-bis",
+      "baseRefName": "main",
+      "baseRefOid": "39b24696b2c60bb4b8a6c92b73f70b63d8bfb4de",
+      "headRepository": "otroan/rfc6296-bis",
+      "headRefName": "rev01",
+      "headRefOid": "a33e6b6efbe64f95912c57a064de0330bbbcca5c",
+      "closedAt": "2023-11-09T16:24:14Z",
+      "mergedAt": "2023-11-09T16:24:14Z",
+      "mergedBy": "buraglio",
+      "mergeCommit": {
+        "oid": "c195ae6ff25e9985eaf026a1d13961b81fd2f331"
+      },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 6,
+      "id": "PR_kwDOKR0JGs5fC8c1",
+      "title": "ICMPv6 error forwarding",
+      "url": "https://github.com/buraglio/rfc6296-bis/pull/6",
+      "state": "MERGED",
+      "author": "otroan",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "- Add co-authors\n- Integrate Errata ID: 3033\n- First go at ICMPv6 error handling\n",
+      "createdAt": "2023-11-09T15:13:24Z",
+      "updatedAt": "2023-11-09T16:24:51Z",
+      "baseRepository": "buraglio/rfc6296-bis",
+      "baseRefName": "main",
+      "baseRefOid": "39b24696b2c60bb4b8a6c92b73f70b63d8bfb4de",
+      "headRepository": "otroan/rfc6296-bis",
+      "headRefName": "icmperror",
+      "headRefOid": "a0ed57fb2262244b4edfbc9dda7866c06b618870",
+      "closedAt": "2023-11-09T16:24:50Z",
+      "mergedAt": "2023-11-09T16:24:50Z",
+      "mergedBy": "buraglio",
+      "mergeCommit": {
+        "oid": "e0b5c55d34ce874f17779bb1e60628fe8096c337"
+      },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 7,
+      "id": "PR_kwDOKR0JGs5fDCCA",
+      "title": "Use informative/normative embedded markdown references",
+      "url": "https://github.com/buraglio/rfc6296-bis/pull/7",
+      "state": "MERGED",
+      "author": "otroan",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "- Add co-authors\n- Integrate Errata ID: 3033\n- First go at ICMPv6 error handling\n",
+      "createdAt": "2023-11-09T15:25:33Z",
+      "updatedAt": "2023-11-09T16:24:53Z",
+      "baseRepository": "buraglio/rfc6296-bis",
+      "baseRefName": "main",
+      "baseRefOid": "39b24696b2c60bb4b8a6c92b73f70b63d8bfb4de",
+      "headRepository": "otroan/rfc6296-bis",
+      "headRefName": "references",
+      "headRefOid": "a0ed57fb2262244b4edfbc9dda7866c06b618870",
+      "closedAt": "2023-11-09T16:24:53Z",
+      "mergedAt": "2023-11-09T16:24:53Z",
+      "mergedBy": "buraglio",
+      "mergeCommit": {
+        "oid": "e0b5c55d34ce874f17779bb1e60628fe8096c337"
+      },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 8,
+      "id": "PR_kwDOKR0JGs5gGiql",
+      "title": "Inline references",
+      "url": "https://github.com/buraglio/rfc6296-bis/pull/8",
+      "state": "MERGED",
+      "author": "otroan",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "- Add co-authors\n- Integrate Errata ID: 3033\n- First go at ICMPv6 error handling\n- inline references\n",
+      "createdAt": "2023-11-22T08:19:33Z",
+      "updatedAt": "2023-11-22T08:23:04Z",
+      "baseRepository": "buraglio/rfc6296-bis",
+      "baseRefName": "main",
+      "baseRefOid": "6f495ac4f6e29d8407c4330ede9f43733cc5e3ae",
+      "headRepository": "otroan/rfc6296-bis",
+      "headRefName": "references",
+      "headRefOid": "e85eae26bbf2115a97d9117b63bf0afea0ffd262",
+      "closedAt": "2023-11-22T08:23:03Z",
+      "mergedAt": "2023-11-22T08:23:03Z",
+      "mergedBy": "otroan",
+      "mergeCommit": {
+        "oid": "05a5e6404d7b61c53ef618967970bea48363855e"
+      },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 12,
+      "id": "PR_kwDOKR0JGs5lSeK3",
+      "title": "minor nits/fixes",
+      "url": "https://github.com/buraglio/rfc6296-bis/pull/12",
+      "state": "MERGED",
+      "author": "boucadair",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2024-01-29T07:08:23Z",
+      "updatedAt": "2024-01-29T11:05:55Z",
+      "baseRepository": "buraglio/rfc6296-bis",
+      "baseRefName": "main",
+      "baseRefOid": "3609a71baf805fbdbe51855d0dd84a51f3198425",
+      "headRepository": "boucadair/rfc6296-bis",
+      "headRefName": "patch-1",
+      "headRefOid": "ab2a098f6636c8ff1a6afebb78bd662db6b96b13",
+      "closedAt": "2024-01-29T11:05:55Z",
+      "mergedAt": "2024-01-29T11:05:55Z",
+      "mergedBy": "otroan",
+      "mergeCommit": {
+        "oid": "dbd96cdcd0f4885c290c211b3c6566968add17b1"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOKR0JGs5uLHwi",
+          "commit": {
+            "abbreviatedOid": "ab2a098"
+          },
+          "author": "otroan",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "Looks good, thanks!",
+          "createdAt": "2024-01-29T11:05:32Z",
+          "updatedAt": "2024-01-29T11:05:32Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 21,
+      "id": "PR_kwDOKR0JGs5lUq7E",
+      "title": "Leading zeros MUST be suppressed as per RFC5952",
+      "url": "https://github.com/buraglio/rfc6296-bis/pull/21",
+      "state": "MERGED",
+      "author": "boucadair",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2024-01-29T12:55:50Z",
+      "updatedAt": "2024-01-29T13:02:37Z",
+      "baseRepository": "buraglio/rfc6296-bis",
+      "baseRefName": "main",
+      "baseRefOid": "90e3fbc28f5a66cb0c4e35d969cb49b136b127c3",
+      "headRepository": "boucadair/rfc6296-bis",
+      "headRefName": "patch-2",
+      "headRefOid": "1f3837b3f9acec07a3cf44c9d1e40841519b7914",
+      "closedAt": "2024-01-29T13:01:58Z",
+      "mergedAt": "2024-01-29T13:01:58Z",
+      "mergedBy": "otroan",
+      "mergeCommit": {
+        "oid": "78a6ec4fc726806dc64a2a550d88537b300c2294"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOKR0JGs5uL7pu",
+          "commit": {
+            "abbreviatedOid": "3f04bcb"
+          },
+          "author": "otroan",
+          "authorAssociation": "COLLABORATOR",
+          "state": "CHANGES_REQUESTED",
+          "body": "",
+          "createdAt": "2024-01-29T13:00:22Z",
+          "updatedAt": "2024-01-29T13:00:41Z",
+          "comments": [
+            {
+              "originalPosition": 12,
+              "body": "You probably don't want to make these leading zero changes to the RFC references. :-)",
+              "createdAt": "2024-01-29T13:00:22Z",
+              "updatedAt": "2024-01-29T13:00:41Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOKR0JGs5uL8Ag",
+          "commit": {
+            "abbreviatedOid": "fc0491a"
+          },
+          "author": "boucadair",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2024-01-29T13:01:08Z",
+          "updatedAt": "2024-01-29T13:01:08Z",
+          "comments": [
+            {
+              "originalPosition": 12,
+              "body": "```suggestion\r\ndeployment of NPTv6 to read {{RFC4864}} and {{RFC5902}}, and to carefully\r\n```",
+              "createdAt": "2024-01-29T13:01:08Z",
+              "updatedAt": "2024-01-29T13:01:08Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOKR0JGs5uL8TV",
+          "commit": {
+            "abbreviatedOid": "1f3837b"
+          },
+          "author": "otroan",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2024-01-29T13:01:50Z",
+          "updatedAt": "2024-01-29T13:01:50Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOKR0JGs5uL8rG",
+          "commit": {
+            "abbreviatedOid": "3f04bcb"
+          },
+          "author": "boucadair",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2024-01-29T13:02:37Z",
+          "updatedAt": "2024-01-29T13:02:37Z",
+          "comments": [
+            {
+              "originalPosition": 12,
+              "body": "ha ha ha. \r\n\r\nI don't know how this was changed, but I updated the PR.",
+              "createdAt": "2024-01-29T13:02:37Z",
+              "updatedAt": "2024-01-29T13:02:37Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
