@@ -1195,6 +1195,7 @@ are said to be "behind" the NPTv6 Translator.
    * POSSIBILITY OF SUCH DAMAGE.
    */
   #include "stdio.h"
+  #include "stdlib.h"
   #include "assert.h"
   /*
    * program to verify the NPTv6 algorithm
