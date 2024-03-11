@@ -6,11 +6,11 @@
 Internet-Draft                                         Painless Security
 Obsoletes: 6296 (if approved)                                   F. Baker
 Intended status: Standards Track                            Unaffiliated
-Expires: 1 August 2024                                          O. Troan
+Expires: 12 September 2024                                      O. Troan
                                                            Cisco Systems
                                                              N. Buraglio
                                                  Energy Sciences Network
-                                                         29 January 2024
+                                                           11 March 2024
 
 
                 IPv6-to-IPv6 Network Prefix Translation
@@ -49,7 +49,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 1 August 2024.
+   This Internet-Draft will expire on 12 September 2024.
 
 Copyright Notice
 
@@ -1415,6 +1415,7 @@ Appendix B.  Verification Code
       * POSSIBILITY OF SUCH DAMAGE.
       */
      #include "stdio.h"
+     #include "stdlib.h"
      #include "assert.h"
      /*
       * program to verify the NPTv6 algorithm
