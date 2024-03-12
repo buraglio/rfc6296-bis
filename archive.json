@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-03-10T01:12:37.147663+00:00",
+  "timestamp": "2024-03-12T01:07:48.072229+00:00",
   "repo": "buraglio/rfc6296-bis",
   "labels": [
     {
@@ -597,6 +597,56 @@
               "updatedAt": "2024-01-29T13:02:37Z"
             }
           ]
+        }
+      ]
+    },
+    {
+      "number": 23,
+      "id": "PR_kwDOKR0JGs5pM5zX",
+      "title": "compile Verification Code on macOS.",
+      "url": "https://github.com/buraglio/rfc6296-bis/pull/23",
+      "state": "MERGED",
+      "author": "tsahara",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Verification Code in appendix B does not compile on the latest version of macOS / Xcode due to an undeclared function erorr.  We should include <stdlib.h> to call atoi(3).\r\n\r\n```\r\n% cc --version\r\nApple clang version 15.0.0 (clang-1500.1.0.2.5)\r\nTarget: x86_64-apple-darwin23.3.0\r\nThread model: posix\r\nInstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin\r\n\r\n% cc nptv6.c\r\nnptv6.c:68:1: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C2x [-Wdeprecated-non-prototype]\r\nadd1(number1, number2)\r\n^\r\nnptv6.c:93:1: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C2x [-Wdeprecated-non-prototype]\r\nsub1(number1, number2)\r\n^\r\nnptv6.c:104:1: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C2x [-Wdeprecated-non-prototype]\r\nsum1(numbers, count)\r\n^\r\nnptv6.c:135:1: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C2x [-Wdeprecated-non-prototype]\r\nnptv6_initialization(subnet)\r\n^\r\nnptv6.c:205:1: warning: type specifier missing, defaults to 'int'; ISO C99 and later do not support implicit int [-Wimplicit-int]\r\nmain(argc, argv)\r\n^\r\nint\r\nnptv6.c:216:19: error: call to undeclared function 'atoi'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]\r\n       suppress = atoi(argv[1]);\r\n                  ^\r\nnptv6.c:205:1: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C2x [-Wdeprecated-non-prototype]\r\nmain(argc, argv)\r\n^\r\n6 warnings and 1 error generated.\r\n```\r\n\r\nfixed:\r\n\r\n```\r\n% cc nptv6.c\r\nnptv6.c:69:1: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C2x [-Wdeprecated-non-prototype]\r\nadd1(number1, number2)\r\n^\r\nnptv6.c:94:1: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C2x [-Wdeprecated-non-prototype]\r\nsub1(number1, number2)\r\n^\r\nnptv6.c:105:1: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C2x [-Wdeprecated-non-prototype]\r\nsum1(numbers, count)\r\n^\r\nnptv6.c:136:1: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C2x [-Wdeprecated-non-prototype]\r\nnptv6_initialization(subnet)\r\n^\r\nnptv6.c:206:1: warning: type specifier missing, defaults to 'int'; ISO C99 and later do not support implicit int [-Wimplicit-int]\r\nmain(argc, argv)\r\n^\r\nint\r\nnptv6.c:206:1: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C2x [-Wdeprecated-non-prototype]\r\n6 warnings generated.\r\n\r\n% ./a.out 1\r\nouter->inner different: calculated: fd01:203:405:0:2:3:4:5 inner: fd01:203:405:ffff:2:3:4:5\r\n% ./a.out 0\r\nouter->inner different: calculated: fd01:203:405:ffff:2:3:4:5 inner: fd01:203:405:0:2:3:4:5\r\n```",
+      "createdAt": "2024-03-11T06:46:24Z",
+      "updatedAt": "2024-03-11T12:38:54Z",
+      "baseRepository": "buraglio/rfc6296-bis",
+      "baseRefName": "main",
+      "baseRefOid": "5ad66c399007c9701d99031521d8cbe87242d6a9",
+      "headRepository": "tsahara/rfc6296-bis",
+      "headRefName": "fix-verification-code-on-macos",
+      "headRefOid": "ae57d4c176cbf7bc46717446192e193e16c4cf7f",
+      "closedAt": "2024-03-11T07:31:59Z",
+      "mergedAt": "2024-03-11T07:31:59Z",
+      "mergedBy": "otroan",
+      "mergeCommit": {
+        "oid": "ce90a9b4f29a119b7b4384ec08376bb28bb88b77"
+      },
+      "comments": [
+        {
+          "author": "tsahara",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Thank you!",
+          "createdAt": "2024-03-11T12:38:52Z",
+          "updatedAt": "2024-03-11T12:38:52Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOKR0JGs5y3PbH",
+          "commit": {
+            "abbreviatedOid": "ae57d4c"
+          },
+          "author": "otroan",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "Looks good!",
+          "createdAt": "2024-03-11T07:31:42Z",
+          "updatedAt": "2024-03-11T07:31:42Z",
+          "comments": []
         }
       ]
     }
