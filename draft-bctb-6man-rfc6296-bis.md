@@ -472,7 +472,7 @@ are said to be "behind" the NPTv6 Translator.
      |     Routing Prefix    | Subnet|   Interface Identifier (IID)  |
      +-------+-------+-------+-------+-------+-------+-------+-------+
 
-            Figure 5: Enumeration of the IPv6 Address {{RFC4291}}
+            Figure 5: Enumeration of the IPv6 Address [RFC4291]
 ~~~~~~~~~~
 
 ##  NPTv6 Configuration Calculations
@@ -538,7 +538,7 @@ are said to be "behind" the NPTv6 Translator.
 * A 16-bit word of the address has the adjustment subtracted from it
       (bitwise inverted and added to it) using one's complement
       arithmetic.  If the result is 0xFFFF, it is overwritten as zero.
-      The choice of word is as specified in Section 3.4 or Section 3.5
+      The choice of word is as specified in Sections 3.4 or 3.5
       as appropriate.
 
 ##  NPTv6 with a /48 or Shorter Prefix
