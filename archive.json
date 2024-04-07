@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-04-04T01:10:34.492089+00:00",
+  "timestamp": "2024-04-07T01:15:28.688446+00:00",
   "repo": "buraglio/rfc6296-bis",
   "labels": [
     {
@@ -646,6 +646,82 @@
           "body": "Looks good!",
           "createdAt": "2024-03-11T07:31:42Z",
           "updatedAt": "2024-03-11T07:31:42Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 24,
+      "id": "PR_kwDOKR0JGs5rr8pG",
+      "title": "fix a bug in Figure 5",
+      "url": "https://github.com/buraglio/rfc6296-bis/pull/24",
+      "state": "MERGED",
+      "author": "boucadair",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2024-04-04T10:40:39Z",
+      "updatedAt": "2024-04-04T15:26:30Z",
+      "baseRepository": "buraglio/rfc6296-bis",
+      "baseRefName": "main",
+      "baseRefOid": "ce90a9b4f29a119b7b4384ec08376bb28bb88b77",
+      "headRepository": "boucadair/rfc6296-bis",
+      "headRefName": "patch-3",
+      "headRefOid": "60b948b5b5e1c3c657548b07da7008b162a570c2",
+      "closedAt": "2024-04-04T15:26:30Z",
+      "mergedAt": "2024-04-04T15:26:30Z",
+      "mergedBy": "buraglio",
+      "mergeCommit": {
+        "oid": "d95bebe67de32dfcbd1c28ff3d059144cb6f4fde"
+      },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 25,
+      "id": "PR_kwDOKR0JGs5rsCkD",
+      "title": "Update changes list",
+      "url": "https://github.com/buraglio/rfc6296-bis/pull/25",
+      "state": "OPEN",
+      "author": "boucadair",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "This section will be part of the published revised RFC to track the main changed vs 6296. \r\n\r\nThis is not a change log section :-)",
+      "createdAt": "2024-04-04T10:54:36Z",
+      "updatedAt": "2024-04-05T10:20:18Z",
+      "baseRepository": "buraglio/rfc6296-bis",
+      "baseRefName": "main",
+      "baseRefOid": "ce90a9b4f29a119b7b4384ec08376bb28bb88b77",
+      "headRepository": "boucadair/rfc6296-bis",
+      "headRefName": "patch-4",
+      "headRefOid": "56c2bc697b6f88978098361ede6cbbd144bc05ad",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [
+        {
+          "author": "buraglio",
+          "authorAssociation": "OWNER",
+          "body": "@otroan can you take a look at this one? ",
+          "createdAt": "2024-04-04T15:30:02Z",
+          "updatedAt": "2024-04-04T15:30:02Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOKR0JGs52LF2J",
+          "commit": {
+            "abbreviatedOid": "56c2bc6"
+          },
+          "author": "otroan",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2024-04-05T10:20:18Z",
+          "updatedAt": "2024-04-05T10:20:18Z",
           "comments": []
         }
       ]
