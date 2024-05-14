@@ -972,6 +972,101 @@ are said to be "behind" the NPTv6 Translator.
   It is licensed under the 2-clause BSD license.
   Last updated: 2024-01-04.
 
+# Deployment Status
+Note to the RFC Editor: This section should be removed before publication as an RFC.
+
+   This section records the status of known operational deployment scenarios of the
+   protocol defined by this specification at the time of posting of
+   this Internet-Draft, and is based on a proposal described in
+   {{?RFC7942}}.  The description of operational deployment scenarios in this section is
+   intended to assist the IETF in its decision processes in
+   progressing drafts to RFCs.  Please note that the listing of any
+   individual operational deployment scenarios here does not imply endorsement by the
+   IETF.  Furthermore, no effort has been spent to verify the
+   information presented here that was supplied by IETF contributors.
+   This is not intended as, and must not be construed to be, a
+   catalog of available implementations or their features.  Readers
+   are advised to note that other implementations may exist.
+
+   According to {{?RFC7942}}, "this will allow reviewers and working
+   groups to assign due consideration to documents that have the
+   benefit of running code, which may serve as evidence of valuable
+   experimentation and feedback that have made the implemented
+   protocols more mature.  It is up to the individual working groups
+   to use this information as they see fit".
+
+## NPTv6 Address translation for air/land/sea/space mobile networking (Fred T. to provide some additional edits to this one)
+
+Due to the transient and mobile nature of air/land/sea/space networking, prefix mobility is necessary for continuity of service.
+NPTv6 allows for the ability to assign static prefixes and provide them with translated access at any number of egress paths, allowing for
+a more seamless experience and consistent access to network resources in environments that may be in constant motion over very large geographic areas making
+other more complex mechanisms for address and prefix mobility wither too slow or too cumbersome due to resource constraints of end systems, or the frequency
+and speed of the host in motion transition. This is particularly applicable in air and space networking. NPTv6 provides a low complexity and low resource mechanism for
+allowing end stations to remain as simple as possible.
+
+## Distributed data center with stateful intrusion detection systems (this needs some work, will address)
+
+Distributed data centers are the de facto deployment model for large, geographically diverse, high availability services. These high availability services often operate in an anycast-style manner
+connecting customers to the geographically closest resource, which may change over time depending on network segmentation, failure of resources, or other interruptions of the path between the client and
+the service resource. Many of these services are bound by compliance requirements (i.e. PCI-DSS, etc.) or internal security policy dictating that they provide intrusion detection systems in line for 
+deep packet inspection and/or intrusion prevention capabilities (IDS/IPS). A hallmark of these stateful intrusion systems is that they require a full
+connection for proper processing, without which the packets appear to be only half of a connection and are deemed either backscatter or otherwise invalid connections and dropped.
+Because the entire handshake is required for proper IDS/IPS operation, and because the networks in question announce their networks in such a way that they may see connections
+from different regions, normalization of the internal addressing is required for appropriate processing. NPTv6 provides the normalization of the transaction at a high rate with low overhead, allowing all traffic to appear
+complete even when the packets originate from other regions.
+
+## Remote access for out of band connectivity
+
+In environments operating IPv6-only networks that require an out of band (OOB) connectivity provided by a third party service to avoid fate sharing, NPTv6 provides a very simple and straightforward way to statelessly map
+a provider assigned (PA) prefix onto a customer defined internal prefix. In this use case, a data center provided /48 is mapped directly to a customer defined provider independent (PI) address block. This customer defined address block is configured
+as an internal, IPv6-only management network providing access to internal systems, console access, IPMI, and other out of band management scenarios. Mapping the PA addressing to the PI addressing allows for access during network
+outages or other service interruptions, and provides for a straightforward and simple mechanism for access during maintenance windows.
+
+~~~~~~~~~~
+                                                        +-------+
+ Remote Client                                          |       |Primary
+           +                                            |       |Transit
+           |                                            +----+--+Router
+           |                                                 |
+           |                                                 |
+           |                                                 |
+           +             +------+              PI            |
+PA Provided +------------+      +------------+ Address +-----+--------+Management
+OOB Access               +------+              space                   Network
+                         NPTv6
+                         Remote
+                         Access
+                         Device
+~~~~~~~~~~
+
+## Small network multihoming
+
+In environments where provider independent addressing is not able to be deployed or is otherwise unavailable, NPTv6 is a supportable tool for providing access in a primary / backup architecture. In this design model, addressing from the primary provider
+is used to address hosts on the access network. At the CPE, NPTv6 can be leveraged to provide failover access in the case that the primary transit provider becomes unavailable. This is typically provided by a tool such as NETMAP or corresponding NPTv6 implementation
+. This method is limited to the smallest sized PA or PD allocation, and requires some additional configuration and, if not using ULA or a self-provided address block, a mechanism for updating dynamic prefixes.
+
+## SD-WAN with local Internet hand off
+In Software Defined Wide Area Networks (SD-WAN) there exists an architecture model that leverages corporate PI address space internally, tunneled back to private infrastructure. Commodity transit is handed off locally to the local provider and the PI addressing
+is translated via NPTv6 to the locally provided PA block. This model allows consistent addressing for all remote site access with granular control over access to corporate network resources while still providing local commodity transit.
+
+~~~~~~~~~~
+Private
+Data                       Native P.I.
+Center  +------------------Address over
+or                         VPN tunnel
+corporate network                 |
+                                  |
+                                  |
+                                  |
+                   ISP         +--+-+
+Commodity ISP +----provided ---+    +----------+LAN
+                   P.A.        +----+           Native P.I. Addressing
+                   Addressing  CPE
+                               with
+                               NPTv6
+                               Process
+~~~~~~~~~~
+
 #  Security Considerations
 
    When NPTv6 is deployed using either of the two-way, algorithmic
@@ -1019,7 +1114,7 @@ are said to be "behind" the NPTv6 Translator.
    Jari Arkko, Keith Moore, Mark Townsley, Merike Kaeo, Ralph Droms,
    Remi Despres, Steve Blake, and Tony Hain.
 
-   The following people provided advice or review comments that substantially improved this revised document: Mohamed Boucadair.
+   The following people provided advice or review comments that substantially improved this revised document: Mohamed Boucadair, Ed Horley, and Fred Templin.
 
 --- back
 
