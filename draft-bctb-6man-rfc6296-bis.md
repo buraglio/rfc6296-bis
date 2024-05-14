@@ -663,7 +663,7 @@ are said to be "behind" the NPTv6 Translator.
    If the embedded IPv6 destination address prefix does not match the internal prefix prior to the rewrite,
    the packet MUST be silently dropped.
 
-   The ICMPv6 forwarding function MUST verify that the length of the embedded pacekt is long enough to contain the whole IPv6 header.
+   The ICMPv6 forwarding function MUST verify that the length of the embedded packet is long enough to contain the whole IPv6 header.
 
    An ICMPv6 Error message checksum covers the entire ICMPv6 message,
    including the payload.  When an ICMPv6 Error packet is received, if the
@@ -1008,7 +1008,7 @@ allowing end stations to remain as simple as possible.
 
 Distributed data centers are the de facto deployment model for large, geographically diverse, high availability services. These high availability services often operate in an anycast-style manner
 connecting customers to the geographically closest resource, which may change over time depending on network segmentation, failure of resources, or other interruptions of the path between the client and
-the service resource. Many of these services are bound by compliance requirements (i.e. PCI-DSS, etc.) or internal security policy dictating that they provide intrusion detection systems in line for 
+the service resource. Many of these services are bound by compliance requirements (i.e. PCI-DSS, etc.) or internal security policy dictating that they provide intrusion detection systems in line for
 deep packet inspection and/or intrusion prevention capabilities (IDS/IPS). A hallmark of these stateful intrusion systems is that they require a full
 connection for proper processing, without which the packets appear to be only half of a connection and are deemed either backscatter or otherwise invalid connections and dropped.
 Because the entire handshake is required for proper IDS/IPS operation, and because the networks in question announce their networks in such a way that they may see connections
