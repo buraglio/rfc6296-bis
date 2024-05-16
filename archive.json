@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-05-14T01:13:45.835970+00:00",
+  "timestamp": "2024-05-16T01:14:21.401351+00:00",
   "repo": "buraglio/rfc6296-bis",
   "labels": [
     {
@@ -725,6 +725,36 @@
           "comments": []
         }
       ]
+    },
+    {
+      "number": 26,
+      "id": "PR_kwDOKR0JGs5va_FK",
+      "title": "First pass at example deployments",
+      "url": "https://github.com/buraglio/rfc6296-bis/pull/26",
+      "state": "MERGED",
+      "author": "buraglio",
+      "authorAssociation": "OWNER",
+      "assignees": [
+        "otroan"
+      ],
+      "labels": [],
+      "body": "Added a first pass at some examples. I have asked both Fred Templin and Ed Horley to shore up the ones noted, so I expect some more changes. ",
+      "createdAt": "2024-05-14T15:53:41Z",
+      "updatedAt": "2024-05-15T07:58:22Z",
+      "baseRepository": "buraglio/rfc6296-bis",
+      "baseRefName": "main",
+      "baseRefOid": "d95bebe67de32dfcbd1c28ff3d059144cb6f4fde",
+      "headRepository": "buraglio/rfc6296-bis",
+      "headRefName": "nb-examples",
+      "headRefOid": "6ae8c2f1e7e3248a50ae8507e139133d46c76077",
+      "closedAt": "2024-05-15T07:58:22Z",
+      "mergedAt": "2024-05-15T07:58:22Z",
+      "mergedBy": "otroan",
+      "mergeCommit": {
+        "oid": "6e4401b79a37cfeacb16d924328c580f0b9e4350"
+      },
+      "comments": [],
+      "reviews": []
     }
   ]
 }
