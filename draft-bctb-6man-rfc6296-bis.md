@@ -49,6 +49,16 @@ informative:
       author:
          ins: NIST
       date: September 2009
+    AERO:
+      title: Automatic Extended Route Optimization
+      author:
+        ins: F. L. Templin, Ed.
+      date: April 2024
+    OMNI:
+      title: Transmission of IP Packets over Overlay Multilink Network (OMNI) Interfaces
+      author:
+        ins: F. L. Templin, Ed.
+      date: April 2024
 
 --- abstract
 
@@ -995,14 +1005,40 @@ Note to the RFC Editor: This section should be removed before publication as an 
    protocols more mature.  It is up to the individual working groups
    to use this information as they see fit".
 
-## NPTv6 Address translation for air/land/sea/space mobile networking (Fred T. to provide some additional edits to this one)
+## NPTv6 Address translation for air/land/sea/space mobile networking
 
-Due to the transient and mobile nature of air/land/sea/space networking, prefix mobility is necessary for continuity of service.
-NPTv6 allows for the ability to assign static prefixes and provide them with translated access at any number of egress paths, allowing for
-a more seamless experience and consistent access to network resources in environments that may be in constant motion over very large geographic areas making
-other more complex mechanisms for address and prefix mobility wither too slow or too cumbersome due to resource constraints of end systems, or the frequency
-and speed of the host in motion transition. This is particularly applicable in air and space networking. NPTv6 provides a low complexity and low resource mechanism for
-allowing end stations to remain as simple as possible.
+Due to the transient and mobile nature of air/land/sea/space
+networking, prefix mobility is necessary for continuity of service.
+NPTv6 allows for the ability to assign static Provider-Aggregated (PA)
+IPv6 prefixes to proxy nodes which may themselves be mobile but
+with stable Internet uplink connections. The proxy nodes then
+delegate translated PA GUA/ULA addresses to their constituent
+mobile nodes which may connect via the proxy downlink either
+directly or over a localized multihop region such as a Mobile
+Ad-hoc Network (MANET).
+
+As long as a mobile node remains associated with a specific proxy, it can
+communicate with local network peers using its ULA, while the proxy will
+perform stateless translation to the corresponding PA GUA to connect
+with Internetworking correspondents. If a mobile node moves to become
+associated with a second proxy, it simply deprecates the GUA/ULA pair
+assigned by the first proxy and requests delegation of a new GUA/ULA pair
+via the new proxy. It can then resume communications with the new
+address pair in a nomadic capacity where the addresses change but
+the Internetworking service is sustained.
+
+Mobile nodes that require a true Provider-Independent (PI) IPv6 prefix
+use their NPTv6 proxy connections as bearer interfaces for coordinating
+with a network distributed mobility service using encapsulation. The
+mobility service coupled with the encapsulation of PI addresses within
+NPTv6-served PA addresses provides mobile node PI IPv6 prefix stability
+even if the node frequently moves between proxys. This takes best
+advantage of translation combined with encapsulation and allows
+mobile nodes to maintain stable Internet of Things (IoT) subnetworks
+even as they move about freely both within local operational regions
+and between remote operational regions.
+
+This deployment is consistent with the [AERO] and [OMNI] specifications.
 
 ## Distributed data center with stateful intrusion detection systems (this needs some work, will address)
 
