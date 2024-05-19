@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-05-16T01:14:21.401351+00:00",
+  "timestamp": "2024-05-19T01:19:04.713491+00:00",
   "repo": "buraglio/rfc6296-bis",
   "labels": [
     {
@@ -753,6 +753,34 @@
       "mergeCommit": {
         "oid": "6e4401b79a37cfeacb16d924328c580f0b9e4350"
       },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 27,
+      "id": "PR_kwDOKR0JGs5vsugH",
+      "title": "Add in updated example from Fred Templin including references to OMNI\u2026",
+      "url": "https://github.com/buraglio/rfc6296-bis/pull/27",
+      "state": "OPEN",
+      "author": "buraglio",
+      "authorAssociation": "OWNER",
+      "assignees": [
+        "otroan"
+      ],
+      "labels": [],
+      "body": "\u2026 and AERO.",
+      "createdAt": "2024-05-16T17:50:37Z",
+      "updatedAt": "2024-05-16T17:50:48Z",
+      "baseRepository": "buraglio/rfc6296-bis",
+      "baseRefName": "main",
+      "baseRefOid": "6e4401b79a37cfeacb16d924328c580f0b9e4350",
+      "headRepository": "buraglio/rfc6296-bis",
+      "headRefName": "nb-examples",
+      "headRefOid": "f8ed0c990f514d1d62f360ba386f356f47e9c14c",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
       "comments": [],
       "reviews": []
     }
