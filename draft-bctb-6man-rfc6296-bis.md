@@ -49,17 +49,7 @@ informative:
       author:
          ins: NIST
       date: September 2009
-    AERO:
-      title: Automatic Extended Route Optimization
-      author:
-        ins: F. L. Templin, Ed.
-      date: April 2024
-    OMNI:
-      title: Transmission of IP Packets over Overlay Multilink Network (OMNI) Interfaces
-      author:
-        ins: F. L. Templin, Ed.
-      date: April 2024
-
+    
 --- abstract
 
 This document describes a stateless, transport-agnostic IPv6-to-IPv6
@@ -1037,8 +1027,6 @@ advantage of translation combined with encapsulation and allows
 mobile nodes to maintain stable Internet of Things (IoT) subnetworks
 even as they move about freely both within local operational regions
 and between remote operational regions.
-
-This deployment is consistent with the [AERO] and [OMNI] specifications.
 
 ## Distributed data center with stateful intrusion detection systems (this needs some work, will address)
 
