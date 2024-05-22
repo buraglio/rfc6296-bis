@@ -49,7 +49,7 @@ informative:
       author:
          ins: NIST
       date: September 2009
-    
+
 --- abstract
 
 This document describes a stateless, transport-agnostic IPv6-to-IPv6
