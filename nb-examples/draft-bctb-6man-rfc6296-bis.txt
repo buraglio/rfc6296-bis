@@ -6,11 +6,11 @@
 Internet-Draft                                         Painless Security
 Obsoletes: 6296 (if approved)                                   F. Baker
 Intended status: Standards Track                            Unaffiliated
-Expires: 17 November 2024                                       O. Troan
+Expires: 23 November 2024                                       O. Troan
                                                            Cisco Systems
                                                              N. Buraglio
                                                  Energy Sciences Network
-                                                             16 May 2024
+                                                             22 May 2024
 
 
                 IPv6-to-IPv6 Network Prefix Translation
@@ -49,7 +49,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 17 November 2024.
+   This Internet-Draft will expire on 23 November 2024.
 
 Copyright Notice
 
@@ -1099,9 +1099,6 @@ Table of Contents
    Things (IoT) subnetworks even as they move about freely both within
    local operational regions and between remote operational regions.
 
-   This deployment is consistent with the [AERO] and [OMNI]
-   specifications.
-
 9.2.  Distributed data center with stateful intrusion detection systems
       (this needs some work, will address)
 
@@ -1293,12 +1290,6 @@ OOB Access               +------+              space                   Network
 
    [NIST]     NIST, "Draft NIST Framework and Roadmap for Smart Grid
               Interoperability Standards, Release 1.0", September 2009.
-
-   [AERO]     Templin, Ed, F. L., "Automatic Extended Route
-              Optimization", April 2024.
-
-   [OMNI]     Templin, Ed, F. L., "Transmission of IP Packets over
-              Overlay Multilink Network (OMNI) Interfaces", April 2024.
 
    [RFC1071]  Braden, R., Borman, D., and C. Partridge, "Computing the
               Internet checksum", RFC 1071, DOI 10.17487/RFC1071,
