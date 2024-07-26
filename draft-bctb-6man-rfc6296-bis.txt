@@ -6,11 +6,11 @@
 Internet-Draft                                         Painless Security
 Obsoletes: 6296 (if approved)                                   F. Baker
 Intended status: Informational                              Unaffiliated
-Expires: 24 November 2024                                       O. Troan
+Expires: 27 January 2025                                        O. Troan
                                                            Cisco Systems
                                                              N. Buraglio
                                                  Energy Sciences Network
-                                                             23 May 2024
+                                                            26 July 2024
 
 
                 IPv6-to-IPv6 Network Prefix Translation
@@ -49,7 +49,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 24 November 2024.
+   This Internet-Draft will expire on 27 January 2025.
 
 Copyright Notice
 
@@ -841,21 +841,19 @@ Table of Contents
       addresses of hosts behind the NPTv6 Translator to other hosts
       behind the same NPTv6 Translator.  However, this cannot be a
       complete solution.  A full discussion of these issues is out of
-      scope for this document, but briefly: (a) reliance on DNS to solve
-      this problem depends on hosts always making queries from DNS
-      servers in the same realm as they are (or on DNS interception
-      proxies, which create their own problems) and on mobile hosts/
-      applications not caching those results; (b) reliance on DNS to
-      solve this problem depends on network administrators on all
-      networks using such applications to reliably and accurately
-      maintain current DNS entries for every host using those
-      applications; and (c) reliance on DNS to solve this problem
-      depends on applications always using DNS names, even though they
-      often must run in environments where DNS names are not reliably
-      maintained for every host.  Other issues are that there is often
-      no single distinguished name for a host and no reliable way for a
-      host to determine what DNS names are associated with it and which
-      names are appropriate to use in which contexts.
+      scope for this document, but, briefly, relying upon DNS to solve
+      this problem depends on (a) hosts always making queries to DNS
+      servers within the same realm as these hosts (or on intermediate
+      DNS forwarders) and mobile hosts/applications not caching those
+      results; (b) network administrators on all networks using such
+      applications to reliably and accurately maintain current DNS
+      entries for every host using those applications; and (c)
+      applications always using DNS names, even though they often run in
+      environments where DNS names are not reliably maintained for every
+      host.  Other issues are that there is often no single
+      distinguished name for a host and no reliable way for a host to
+      determine what DNS names are associated with it and which names
+      are appropriate to use in which contexts.
 
 5.1.  Recommendation for Network Planners Considering Use of NPTv6
       Translation
