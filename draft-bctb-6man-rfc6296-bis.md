@@ -784,18 +784,16 @@ are said to be "behind" the NPTv6 Translator.
    Translator only to hosts that are also behind the same NPTv6
    Translator and perhaps to also expose only the "internal" addresses
    of hosts behind the NPTv6 Translator to other hosts behind the same
-   NPTv6 Translator.  However, this cannot be a complete solution.  A
+   NPTv6 Translator. However, this cannot be a complete solution.  A
    full discussion of these issues is out of scope for this document,
-   but briefly: (a) reliance on DNS to solve this problem depends on
-   hosts always making queries from DNS servers in the same realm as
-   they are (or on DNS interception proxies, which create their own
-   problems) and on mobile hosts/applications not caching those results;
-   (b) reliance on DNS to solve this problem depends on network
+   but, briefly, relying upon DNS to solve this problem depends on (a) 
+   hosts always making queries to DNS servers within the same realm as
+   these hosts (or on intermediate DNS forwarders) and mobile hosts/applications not caching those results;
+   (b) network
    administrators on all networks using such applications to reliably
    and accurately maintain current DNS entries for every host using
-   those applications; and (c) reliance on DNS to solve this problem
-   depends on applications always using DNS names, even though they
-   often must run in environments where DNS names are not reliably
+   those applications; and (c) applications always using DNS names, even though they
+   often run in environments where DNS names are not reliably
    maintained for every host.  Other issues are that there is often no
    single distinguished name for a host and no reliable way for a host
    to determine what DNS names are associated with it and which names
