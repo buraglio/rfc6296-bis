@@ -786,7 +786,7 @@ are said to be "behind" the NPTv6 Translator.
    of hosts behind the NPTv6 Translator to other hosts behind the same
    NPTv6 Translator. However, this cannot be a complete solution.  A
    full discussion of these issues is out of scope for this document,
-   but, briefly, relying upon DNS to solve this problem depends on (a) 
+   but, briefly, relying upon DNS to solve this problem depends on (a)
    hosts always making queries to DNS servers within the same realm as
    these hosts (or on intermediate DNS forwarders) and mobile hosts/applications not caching those results;
    (b) network
