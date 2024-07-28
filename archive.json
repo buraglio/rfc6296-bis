@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-07-25T01:20:10.965080+00:00",
+  "timestamp": "2024-07-28T01:26:08.851184+00:00",
   "repo": "buraglio/rfc6296-bis",
   "labels": [
     {
@@ -796,6 +796,48 @@
           "body": "I think I would prefer not to reference AERO/OMNI document.\r\nThat should be fine while still describing the use case I think?\r\nAs I don't think that there is any NPTv6 dependency on AERO/OMNI?",
           "createdAt": "2024-05-22T07:52:20Z",
           "updatedAt": "2024-05-22T07:52:20Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 28,
+      "id": "PR_kwDOKR0JGs52lPYO",
+      "title": "simplify discussion on DNS issues",
+      "url": "https://github.com/buraglio/rfc6296-bis/pull/28",
+      "state": "MERGED",
+      "author": "boucadair",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2024-07-26T13:35:43Z",
+      "updatedAt": "2024-07-26T16:38:21Z",
+      "baseRepository": "buraglio/rfc6296-bis",
+      "baseRefName": "main",
+      "baseRefOid": "164ede3330cb7ad0e411e50d315f910e0151e107",
+      "headRepository": "boucadair/rfc6296-bis",
+      "headRefName": "patch-5",
+      "headRefOid": "987b6550d5642a6d031282b8ef0dd202f7327d77",
+      "closedAt": "2024-07-26T16:38:21Z",
+      "mergedAt": "2024-07-26T16:38:21Z",
+      "mergedBy": "buraglio",
+      "mergeCommit": {
+        "oid": "c1930f28231cab7e621a01108f91697fd233a9cf"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOKR0JGs6DQ-T8",
+          "commit": {
+            "abbreviatedOid": "987b655"
+          },
+          "author": "buraglio",
+          "authorAssociation": "OWNER",
+          "state": "APPROVED",
+          "body": "Looks good",
+          "createdAt": "2024-07-26T16:35:57Z",
+          "updatedAt": "2024-07-26T16:35:57Z",
           "comments": []
         }
       ]
