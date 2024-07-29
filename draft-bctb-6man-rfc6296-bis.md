@@ -1576,22 +1576,10 @@ Commodity ISP +----provided ---+    +----------+LAN
 
 # Changes since RFC6296
 
-* Revision 03
    - Updated references to updated RFCs. RFC 5996, RFC 6204, RFC 5389, RFC 5766, RFC 5245, RFC6145.
-   - Added changes from RFC6296 section (this)
    - Boilerplate text to Implementation status
    - Update IPv6 addresses to be 5952 compliant.
-   - Add note that this document obsoletes RFC6296.
-   - Add new sub-acknowledgement section.
-
-* Revision 02
-   - Added section on implementation status
-   - Added section recommending against the use of ALG
-
-* Revision 01
-   - Added authors
-   - Added section on ICMPv6 error proxying
+   - Added a new section on implementation status
+   - Added a new section recommending against the use of ALG
+   - Added a new section on ICMPv6 error proxying
    - Fixed errata 3033
-
-* Revision 00
-   - Converted to Markdown format from XML RFC6296 original.
