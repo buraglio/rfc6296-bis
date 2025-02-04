@@ -6,11 +6,11 @@
 Internet-Draft                                         Painless Security
 Obsoletes: 6296 (if approved)                                   F. Baker
 Intended status: Informational                              Unaffiliated
-Expires: 27 January 2025                                        O. Troan
+Expires: 8 August 2025                                          O. Troan
                                                            Cisco Systems
                                                              N. Buraglio
                                                  Energy Sciences Network
-                                                            26 July 2024
+                                                         4 February 2025
 
 
                 IPv6-to-IPv6 Network Prefix Translation
@@ -49,11 +49,11 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 27 January 2025.
+   This Internet-Draft will expire on 8 August 2025.
 
 Copyright Notice
 
-   Copyright (c) 2024 IETF Trust and the persons identified as the
+   Copyright (c) 2025 IETF Trust and the persons identified as the
    document authors.  All rights reserved.
 
    This document is subject to BCP 78 and the IETF Trust's Legal
@@ -1107,7 +1107,7 @@ Table of Contents
    may change over time depending on network segmentation, failure of
    resources, or other interruptions of the path between the client and
    the service resource.  Many of these services are bound by compliance
-   requirements (i.e.  PCI-DSS, etc.) or internal security policy
+   requirements (i.e. PCI-DSS, etc.) or internal security policy
    dictating that they provide intrusion detection systems in line for
    deep packet inspection and/or intrusion prevention capabilities (IDS/
    IPS).  A hallmark of these stateful intrusion systems is that they
