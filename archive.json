@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-01-30T01:34:38.298452+00:00",
+  "timestamp": "2025-02-06T01:37:47.663315+00:00",
   "repo": "buraglio/rfc6296-bis",
   "labels": [
     {
@@ -841,6 +841,49 @@
           "comments": []
         }
       ]
+    },
+    {
+      "number": 29,
+      "id": "PR_kwDOKR0JGs6KBzc4",
+      "title": "Nb examples",
+      "url": "https://github.com/buraglio/rfc6296-bis/pull/29",
+      "state": "MERGED",
+      "author": "buraglio",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2025-02-04T17:07:32Z",
+      "updatedAt": "2025-02-04T17:08:34Z",
+      "baseRepository": "buraglio/rfc6296-bis",
+      "baseRefName": "main",
+      "baseRefOid": "1d70f87289b148f660cb60b00499c5248cd85a68",
+      "headRepository": "buraglio/rfc6296-bis",
+      "headRefName": "nb-examples",
+      "headRefOid": "27d4c20c2a708c6bf8f7b47925238789ff40f003",
+      "closedAt": "2025-02-04T17:08:29Z",
+      "mergedAt": "2025-02-04T17:08:29Z",
+      "mergedBy": "buraglio",
+      "mergeCommit": {
+        "oid": "084b3ef175df94738984124735d0fdef220367c7"
+      },
+      "comments": [
+        {
+          "author": "buraglio",
+          "authorAssociation": "OWNER",
+          "body": "Fixing the github actions to reflect new template",
+          "createdAt": "2025-02-04T17:08:09Z",
+          "updatedAt": "2025-02-04T17:08:09Z"
+        },
+        {
+          "author": "buraglio",
+          "authorAssociation": "OWNER",
+          "body": "\r\nFixing the github actions to reflect new template\r\n\r\n",
+          "createdAt": "2025-02-04T17:08:32Z",
+          "updatedAt": "2025-02-04T17:08:32Z"
+        }
+      ],
+      "reviews": []
     }
   ]
 }
