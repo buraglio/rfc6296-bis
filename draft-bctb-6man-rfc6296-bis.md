@@ -7,7 +7,7 @@ ipr: trust200902
 area: Int
 wg: 6MAN
 kw: Internet-Draft
-cat: info
+cat: exp
 obsoletes: 6296
 
 author:
