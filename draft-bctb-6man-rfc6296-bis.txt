@@ -5,12 +5,11 @@
 6MAN                                                           M. Cullen
 Internet-Draft                                         Painless Security
 Obsoletes: 6296 (if approved)                                   F. Baker
-Intended status: Experimental                               Unaffiliated
-Expires: 25 January 2026                                        O. Troan
-                                                           Cisco Systems
+Intended status: Experimental                                   O. Troan
+Expires: 5 March 2026                                       Unaffiliated
                                                              N. Buraglio
                                                  Energy Sciences Network
-                                                            24 July 2025
+                                                        1 September 2025
 
 
                 IPv6-to-IPv6 Network Prefix Translation
@@ -49,7 +48,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 25 January 2026.
+   This Internet-Draft will expire on 5 March 2026.
 
 Copyright Notice
 
@@ -1870,9 +1869,9 @@ Authors' Addresses
 
 
    Ole Troan
-   Cisco Systems
+   Unaffiliated
    Norway
-   Email: otroan@cisco.com
+   Email: otroan@employees.org
 
 
    Nick Buraglio
