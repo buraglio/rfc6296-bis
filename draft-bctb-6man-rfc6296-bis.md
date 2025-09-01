@@ -28,8 +28,8 @@ author:
    -
      ins: O. Troan
      name: Ole Troan
-     org: Cisco Systems
-     email: otroan@cisco.com
+     org: Unaffiliated
+     email: otroan@employees.org
      country: Norway
    -
      ins: N. Buraglio
